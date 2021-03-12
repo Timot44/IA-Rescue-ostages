@@ -41,7 +41,7 @@ public abstract class CacState
 
       public override void Attack(IACac ctx)
       {
-         base.Attack(ctx);d
+         base.Attack(ctx);
       }
    }
    
