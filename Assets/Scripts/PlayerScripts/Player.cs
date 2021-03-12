@@ -4,15 +4,15 @@ using UnityEngine;
 
 public abstract class Player : MonoBehaviour
 {
-    public int life;
-    public int maxLife;
-    public float walkSpeed;
-    public int damageWeapon;
-    public float shootRate;
-    public int ammoCount;
-    public bool canDisarm;
-    public Weapons weapon;
-    public int currentAmmo;
+    protected int life;
+    protected int maxLife;
+    protected float walkSpeed;
+    protected int damageWeapon;
+    protected float shootRate;
+    protected int ammoCount;
+    protected bool canDisarm;
+    protected Weapons weapon;
+    protected int currentAmmo;
 
 
 
