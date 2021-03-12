@@ -15,7 +15,6 @@ public class IAPatroller : IAParent
 
     private PatrollerState currentState;
     
-    
     private NavMeshAgent agent;
     
 
