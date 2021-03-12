@@ -11,14 +11,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IAParent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IAPatroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/RiderProjects/PruneCourseConsole/StateMachine/StateMachine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IA/PatrollerState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IA/IAParent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IA/IAHostage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IA/IAPatroller.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/IAParent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IAPatroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IA/IAPatroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IA/PatrollerState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IA/IAHostage.cs" />
       </list>
     </option>
   </component>
@@ -70,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615537348332</updated>
-      <workItem from="1615537356305" duration="958000" />
+      <workItem from="1615537356305" duration="4373000" />
     </task>
     <servers />
   </component>
@@ -79,4 +85,10 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="WindowStateProjectService">
+    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1615542240502">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615542240502" />
+  </component>
 </project>
