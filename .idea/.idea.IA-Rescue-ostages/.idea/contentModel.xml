@@ -77,13 +77,22 @@
           <e p="DistStateP2.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="IA" t="Include">
+<<<<<<< Updated upstream
             <e p="HostageState.cs" t="Include" />
+=======
+            <e p="CacState.cs" t="Include" />
+            <e p="HostageState.cs" t="Include" />
+            <e p="IA Cac.cs" t="Include" />
+>>>>>>> Stashed changes
             <e p="IAHostage.cs" t="Include" />
             <e p="IAParent.cs" t="Include" />
             <e p="IAPatroller.cs" t="Include" />
             <e p="PatrollerState.cs" t="Include" />
           </e>
+<<<<<<< Updated upstream
           <e p="IADist.cs" t="Include" />
+=======
+>>>>>>> Stashed changes
           <e p="PlayerScripts" t="Include">
             <e p="Player.cs" t="Include" />
             <e p="PlayerLife.cs" t="Include" />
