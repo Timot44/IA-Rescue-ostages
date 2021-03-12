@@ -6,13 +6,11 @@ public class IADist : IAParent
 
    public NavMeshAgent agent;
     
-    // Start is called before the first frame update
     void Start()
     {
         currentState = new DistStateP1(this);
     }
 
-    // Update is called once per frame
     void Update()
     {
         currentState.Move();

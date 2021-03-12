@@ -8,14 +8,14 @@ public abstract class IAParent : MonoBehaviour
     [Header("Main Parameters")]
     public float detectionRange;
     
-    public float baseSpeed;
-    
     public int baseDamage;
-    public float distanceToChangeWaypoint;
+    
     protected int health;
     public int maxHealth;
     
     [Header("Movement Parameters")]
+    public float baseSpeed;
+    public float distanceToChangeWaypoint;
     public Transform[] patrolWaypoint;
 
     public abstract void SwitchToState(int stateIndex);
@@ -23,6 +23,7 @@ public abstract class IAParent : MonoBehaviour
     public virtual void TakeDamage(int damage)
     {
         health -= damage;
+        
     }
 
     public void Dead()
