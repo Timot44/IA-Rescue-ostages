@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class IAParent
+public abstract class IAParent : MonoBehaviour
 {
     public float detectionRange;
     

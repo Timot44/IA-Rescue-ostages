@@ -12,11 +12,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IAParent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IAPatroller.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/IAParent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IAPatroller.cs" />
       </list>
     </option>
   </component>
@@ -68,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615537348332</updated>
-      <workItem from="1615537356305" duration="306000" />
+      <workItem from="1615537356305" duration="958000" />
     </task>
     <servers />
   </component>

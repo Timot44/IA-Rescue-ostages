@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="IAParent.cs" t="Include" />
+          <e p="IAPatroller.cs" t="Include" />
           <e p="Weapons.cs" t="Include" />
         </e>
       </e>
