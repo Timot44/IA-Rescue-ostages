@@ -3,6 +3,10 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
+<<<<<<< Updated upstream
+=======
+      <Path>Assets</Path>
+>>>>>>> Stashed changes
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.ide.rider@1.1.4</Path>
@@ -21,7 +25,10 @@
       <Path>.idea</Path>
       <Path>Library</Path>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <Path>Logs</Path>
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
       <Path>Temp</Path>

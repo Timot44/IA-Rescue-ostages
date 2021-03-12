@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <component name="ChangeListManager">
     <list default="true" id="c817e3ed-9565-466a-a218-e233733b90ac" name="Default Changelist" comment="" />
 =======
@@ -27,6 +28,12 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons.cs" afterDir="false" />
     </list>
 >>>>>>> Stashed changes
+=======
+  <component name="ChangeListManager">
+    <list default="true" id="d41acd20-382c-4b6d-9731-dc3d98707bc6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +42,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< Updated upstream
   <component name="HighlightingSettingsPerFile">
 <<<<<<< Updated upstream
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IAParent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,10 +72,34 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
 >>>>>>> Stashed changes
+=======
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerLife.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerShoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\ronde\Desktop\Unity E-artsup\IA 2nde Semestre\IA-Rescue-ostages\.idea\.idea.IA-Rescue-ostages\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1peJUncwxG7QaoqL2aCV0JAhgyy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+>>>>>>> Stashed changes
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.4" value="true" />
@@ -77,6 +109,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
 >>>>>>> Stashed changes
+=======
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.3" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+>>>>>>> Stashed changes
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -84,10 +122,13 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
       <option name="selectedOptions">
         <set />
       </option>
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       <method v="2" />
     </configuration>
@@ -95,6 +136,7 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       <method v="2" />
     </configuration>
@@ -111,11 +153,17 @@
       </list>
     </option>
   </component>
+=======
+      <method v="2" />
+    </configuration>
+  </component>
+>>>>>>> Stashed changes
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
       <changelist id="c817e3ed-9565-466a-a218-e233733b90ac" name="Default Changelist" comment="" />
       <created>1615537348332</created>
       <option name="number" value="Default" />
@@ -139,15 +187,27 @@
       <updated>1615537125337</updated>
       <workItem from="1615537141725" duration="695000" />
 >>>>>>> Stashed changes
+=======
+      <changelist id="d41acd20-382c-4b6d-9731-dc3d98707bc6" name="Default Changelist" comment="" />
+      <created>1615537641432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615537641432</updated>
+      <workItem from="1615537644731" duration="611000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
     <option name="version" value="1" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+<<<<<<< Updated upstream
 =======
     <option name="version" value="3" />
   </component>
@@ -166,6 +226,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+>>>>>>> Stashed changes
+=======
+  <component name="WindowStateProjectService">
+    <state x="690" y="243" key="RiderGenerateDialog" timestamp="1615538068885">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="243" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1615538068885" />
   </component>
 >>>>>>> Stashed changes
 </project>
