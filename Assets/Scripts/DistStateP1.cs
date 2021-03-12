@@ -13,7 +13,7 @@ public class DistStateP1 : DistState
         for (int i = 0; i < _context.patrolWaypoint.Length;)
         {
             _context.agent.SetDestination(_context.patrolWaypoint[i].position);
-            if (_context.gameObject.transform.position == _context.patrolWaypoint[i].position)
+            if (Vector3.Distance(_context.gameObject.transform.position,_context.patrolWaypoint[i].position) <= _context.distanceToChangeWaypoint)
             {
                 i++;
             }
