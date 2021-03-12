@@ -17,6 +17,7 @@ public class PlayerShoot : Player
     public float fireRate;
     public int weaponDamage;
     public int ammo;
+    public string weaponName;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -43,7 +44,7 @@ public class PlayerShoot : Player
        
 
 
-        if (Input.GetMouseButtonDown(0) && currentWeapoons.fireRate <= 0f && currentWeapoons != null)
+        if (Input.GetMouseButtonDown(0) && currentWeapoons.fireRate <= 0f && currentWeapoons != null && ammo > 0)
         {
             Shoot();
         }
@@ -55,7 +56,7 @@ public class PlayerShoot : Player
         fireRate = currentWeapoons.fireRate;
         ammo = currentWeapoons.currentAmmo;
         weaponDamage = currentWeapoons.damage;
-
+        weaponName = currentWeapoons.name;
     }
     private void FixedUpdate()
     {
@@ -72,12 +73,12 @@ public class PlayerShoot : Player
         Debug.DrawRay(_pos_cam, Camera.main.transform.forward * 100, Color.magenta, 3f);
 
         fireRate = currentWeapoons.maxFireRate;
-
+        Debug.Log("Player is shooting");
          
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit, currentWeapoons.range,currentWeapoons.layers))
         {
             Debug.Log(raycastHit.collider.name);
-         
+            
         }
     }
     
