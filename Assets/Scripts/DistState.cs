@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class DistState
 {
-    
+    public float maxDistance;
     public virtual void Move()
     {
         

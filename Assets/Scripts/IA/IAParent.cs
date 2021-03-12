@@ -11,7 +11,7 @@ public abstract class IAParent : MonoBehaviour
     public float baseSpeed;
     
     public int baseDamage;
-    
+    public float distanceToChangeWaypoint;
     protected int health;
     public int maxHealth;
     

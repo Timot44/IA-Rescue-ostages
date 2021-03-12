@@ -1,20 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Transactions;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine.AI;
 
 public class IADist : IAParent
 {
     public DistState currentState;
 
-    public List<Transform> patrolPoints;
+   public NavMeshAgent agent;
+    
     // Start is called before the first frame update
-    public override void SwitchToState(int stateIndex)
-    {
-        throw new System.NotImplementedException();
-    }
-
     void Start()
     {
         currentState = new DistStateP1(this);
@@ -24,5 +16,9 @@ public class IADist : IAParent
     void Update()
     {
         currentState.Move();
+    }
+    public override void SwitchToState(int stateIndex)
+    {
+        currentState = new DistStateP2(this);
     }
 }
