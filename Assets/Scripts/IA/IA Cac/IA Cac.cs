@@ -15,21 +15,10 @@ public class IACac : IAParent
         switch (stateIndex)
         {
             case 1:
-                currentState = new CacState.CacStateP1();
+                currentState = new CacStateP1();
                 break;
             case 2:
-                currentState = new CacState.CacStateP2();
-                break;
-            default:
-                Debug.LogError("State index do not exist : " + stateIndex);
-                break;
-        }switch (stateIndex)
-        {
-            case 1:
-                currentState = new CacState.CacStateP1();
-                break;
-            case 2:
-                currentState = new CacState.CacStateP2();
+                currentState = new CacStateP2();
                 break;
             default:
                 Debug.LogError("State index do not exist : " + stateIndex);
