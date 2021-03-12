@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,18 +14,20 @@ public abstract class IAParent : MonoBehaviour
     protected int health;
     public int maxHealth;
 
-    public virtual void SwitchToState(int stateIndex)
-    {
-             
-    }
+    public abstract void SwitchToState(int stateIndex);
     
     public virtual void TakeDamage(int damage)
     {
-        
+        health -= damage;
     }
 
     public void Dead()
     {
-        
+        Destroy(gameObject);
+    }
+
+    public void Start()
+    {
+        health = maxHealth;
     }
 }

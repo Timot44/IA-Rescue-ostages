@@ -26,7 +26,18 @@ public class IAPatroller : IAParent
 
     public override void SwitchToState(int stateIndex)
     {
-        base.SwitchToState(stateIndex);
+        switch (stateIndex)
+        {
+            case 1:
+                currentState = new PatrollerStateP1();
+                break;
+            case 2:
+                currentState = new PatrollerStateP2();
+                break;
+            default:
+                Debug.LogError("State index do not exist : " + stateIndex);
+                break;
+        }
     }
 
     
