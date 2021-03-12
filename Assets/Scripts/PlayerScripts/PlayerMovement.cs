@@ -31,10 +31,7 @@ public class PlayerMovement : Player
         Vector3 move = (transform.right * moveX) + (transform.forward * moveZ);
         
         controller.Move(move * (walkSpeed * Time.deltaTime));
-
-        //Simulation de la gravité
-        _velocity.y += gravity * Time.deltaTime;
-        controller.Move(_velocity * Time.deltaTime);
+        
     }
 
     // Update is called once per frame
