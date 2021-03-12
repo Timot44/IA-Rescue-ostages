@@ -7,4 +7,6 @@ public class Weapons : ScriptableObject
     public int startAmmo;
     public int fireRate;
     public int damage;
+    public MeshRenderer weaponMesh;
+    public MeshFilter weaponMeshFilter;
 }
