@@ -19,11 +19,15 @@ public abstract class IAParent : MonoBehaviour
     public Transform[] patrolWaypoint;
 
     public abstract void SwitchToState(int stateIndex);
+
+    public virtual void HelpPatroller()
+    {
+        
+    }
     
     public virtual void TakeDamage(int damage)
     {
         health -= damage;
-        
     }
 
     public void Dead()

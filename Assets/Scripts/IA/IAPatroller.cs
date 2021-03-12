@@ -31,7 +31,12 @@ public class IAPatroller : IAParent
 
     void CallEnemies()
     {
-        
+        GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (var enemy in allEnemies)
+        {
+            
+        }
     }
 
     public override void SwitchToState(int stateIndex)
@@ -96,6 +101,10 @@ public class IAPatroller : IAParent
     {
         yield return new WaitForSeconds(timeToStopFleeing);
         fleeing = false;
+    }
+
+    public override void HelpPatroller()
+    {
     }
 
     private void OnDrawGizmosSelected()
