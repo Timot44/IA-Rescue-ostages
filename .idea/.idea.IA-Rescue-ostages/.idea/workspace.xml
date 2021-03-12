@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="c817e3ed-9565-466a-a218-e233733b90ac" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="d41acd20-382c-4b6d-9731-dc3d98707bc6" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,25 +14,40 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< Updated upstream
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/RiderProjects/PruneCourseConsole/StateMachine/StateMachine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IA/PatrollerState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IA/IAParent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IA/IAHostage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IA/IAPatroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IAParent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IAPatroller.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/IAParent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IAPatroller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IA/IAPatroller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IA/PatrollerState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IA/IAHostage.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1peItsTMhhwJWVbT1McT259HADF" />
+=======
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerLife.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerShoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\ronde\Desktop\Unity E-artsup\IA 2nde Semestre\IA-Rescue-ostages\.idea\.idea.IA-Rescue-ostages\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1peJUncwxG7QaoqL2aCV0JAhgyy" />
+>>>>>>> Stashed changes
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -36,8 +55,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
+<<<<<<< Updated upstream
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.4" value="true" />
+=======
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.3" value="true" />
+>>>>>>> Stashed changes
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -54,6 +79,7 @@
       <method v="2" />
     </configuration>
   </component>
+<<<<<<< Updated upstream
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -66,17 +92,29 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
       <changelist id="c817e3ed-9565-466a-a218-e233733b90ac" name="Default Changelist" comment="" />
       <created>1615537348332</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615537348332</updated>
-      <workItem from="1615537356305" duration="4373000" />
+      <workItem from="1615537356305" duration="958000" />
+=======
+      <changelist id="d41acd20-382c-4b6d-9731-dc3d98707bc6" name="Default Changelist" comment="" />
+      <created>1615537641432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615537641432</updated>
+      <workItem from="1615537644731" duration="611000" />
+      <workItem from="1615538272503" duration="27000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -85,10 +123,13 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+<<<<<<< Updated upstream
+=======
   <component name="WindowStateProjectService">
-    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1615542240502">
+    <state x="690" y="243" key="RiderGenerateDialog" timestamp="1615538068885">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615542240502" />
+    <state x="690" y="243" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1615538068885" />
   </component>
+>>>>>>> Stashed changes
 </project>
