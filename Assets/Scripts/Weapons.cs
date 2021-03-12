@@ -5,8 +5,9 @@ public class Weapons : ScriptableObject
 {
     public string name;
     public float fireRate;
-    public int startAmmo;
+    public float maxFireRate;
+    public int currentAmmo;
     public int damage;
-    public MeshRenderer weaponMesh;
-    public MeshFilter weaponMeshFilter;
+    public float range;
+    public LayerMask layers;
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1941184130270845001}
   m_Layer: 0
   m_Name: MainCamera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,6 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9379aa158c405ed48adfb316ceb429e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentWeapoons: {fileID: 0}
+  weapons_holders: {fileID: 1941184130868595130}
 --- !u!114 &1941184131251242933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +233,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1941184131284252803}
   - component: {fileID: 1941184131284252805}
-  - component: {fileID: 1941184131284252802}
   m_Layer: 0
   m_Name: GunCamera
   m_TagString: Untagged
@@ -297,11 +298,3 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &1941184131284252802
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941184131284252800}
-  m_Enabled: 1
