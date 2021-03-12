@@ -20,7 +20,10 @@
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Library</Path>
+<<<<<<< Updated upstream
       <Path>Logs</Path>
+=======
+>>>>>>> Stashed changes
       <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
