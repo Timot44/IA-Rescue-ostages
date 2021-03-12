@@ -28,7 +28,7 @@ public abstract class Player : MonoBehaviour
         
     }
     
-    public virtual void TakeDamage()
+    public virtual void TakeDamage(int amount)
     {
         
     }
