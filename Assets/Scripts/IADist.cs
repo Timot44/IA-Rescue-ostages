@@ -10,6 +10,11 @@ public class IADist : IAParent
 
     public List<Transform> patrolPoints;
     // Start is called before the first frame update
+    public override void SwitchToState(int stateIndex)
+    {
+        throw new System.NotImplementedException();
+    }
+
     void Start()
     {
         currentState = new DistStateP1(this);

@@ -12,9 +12,12 @@ public class DistStateP1 : DistState
     }
     public override void Move()
     {
-        foreach (var patrolPoint in context.patrolPoints)
+        for (int i = 0; i < context.patrolPoints.Count;)
         {
+            foreach (var patrolPoint in context.patrolPoints)
+            {
             
+            }
         }
     }
 
