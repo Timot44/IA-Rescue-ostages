@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c71c900ced0e249b9b60d0fbe5b0d7, type: 3}
   m_Name: SimpleGun
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   name: Pistol
   fireRate: 0
   maxFireRate: 1.5
@@ -21,3 +22,11 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 512
+=======
+  name: SimpleGun
+  fireRate: 0.5
+  startAmmo: 10
+  damage: 1
+  weaponMesh: {fileID: 0}
+  weaponMeshFilter: {fileID: 0}
+>>>>>>> Stashed changes

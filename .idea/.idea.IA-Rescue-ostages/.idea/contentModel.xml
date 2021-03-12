@@ -72,9 +72,6 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraController.cs" t="Include" />
-          <e p="DistState.cs" t="Include" />
-          <e p="DistStateP1.cs" t="Include" />
-          <e p="DistStateP2.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="IA" t="Include">
             <e p="HostageState.cs" t="Include" />
@@ -82,12 +79,17 @@
               <e p="CacState.cs" t="Include" />
               <e p="IA Cac.cs" t="Include" />
             </e>
+            <e p="IADist" t="Include">
+              <e p="DistState.cs" t="Include" />
+              <e p="DistStateP1.cs" t="Include" />
+              <e p="DistStateP2.cs" t="Include" />
+              <e p="IADist.cs" t="Include" />
+            </e>
             <e p="IAHostage.cs" t="Include" />
             <e p="IAParent.cs" t="Include" />
             <e p="IAPatroller.cs" t="Include" />
             <e p="PatrollerState.cs" t="Include" />
           </e>
-          <e p="IADist.cs" t="Include" />
           <e p="PlayerScripts" t="Include">
             <e p="Player.cs" t="Include" />
             <e p="PlayerLife.cs" t="Include" />
