@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     public Transform currentRespawnPoint;
     private float _timerToSpawnItem;
-
+    private float _initialTimer;
     public bool isPhaseTwo;
 
     #region singleton
@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         if (Instance == null)
-        { Instance = this;
+        {
+            Instance = this;
         }
     }
 
@@ -28,22 +29,31 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _initialTimer = _timerToSpawnItem;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        _timerToSpawnItem -= Time.deltaTime;
+        if (_timerToSpawnItem <= 0)
+        {
+            SpawnItem();
+        }
     }
 
     public void SwitchPhaseForAll()
     {
-        
+        //TODO faire le changement de phase
     }
 
     private void SpawnItem()
     {
-        
+        _timerToSpawnItem = _initialTimer;
+        foreach (var placeToSpawnItem in placeToSpawnItems)
+        {
+            GameObject itemToSpawn = itemSpawnable[Random.Range(0, itemSpawnable.Count - 1)];
+            Instantiate(itemToSpawn, placeToSpawnItem.position, Quaternion.identity);
+        }
     }
 }
