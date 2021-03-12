@@ -5,6 +5,7 @@ using UnityEngine;
 
 public abstract class IAParent : MonoBehaviour
 {
+    [Header("Main Parameters")]
     public float detectionRange;
     
     public float baseSpeed;
@@ -13,6 +14,9 @@ public abstract class IAParent : MonoBehaviour
     
     protected int health;
     public int maxHealth;
+    
+    [Header("Movement Parameters")]
+    public Transform[] patrolWaypoint;
 
     public abstract void SwitchToState(int stateIndex);
     

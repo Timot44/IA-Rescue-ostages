@@ -1,17 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class IAPatroller : IAParent
 {
     private bool minePlaced;
     
+    [Header("Call parameters")]
     public int callEnemyCount;
     public float callEnemyMaxDistance;
     
     private bool fleeing;
 
     private PatrollerState currentState;
+    
+    
+    private NavMeshAgent agent;
+    
 
 
     void Flee()
@@ -43,7 +49,7 @@ public class IAPatroller : IAParent
     
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
     }
     void Update()
     {
