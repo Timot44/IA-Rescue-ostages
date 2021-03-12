@@ -10,8 +10,6 @@ public abstract class IAParent : MonoBehaviour
     
     public int baseDamage;
     
-    public int baseDamage;
-    public float distanceToChangeWaypoint;
     protected int health;
     public int maxHealth;
     
