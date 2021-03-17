@@ -4,8 +4,7 @@ using UnityEngine;
 
 public abstract class Player : MonoBehaviour
 {
-    protected int life;
-    protected int maxLife;
+   
     protected float walkSpeed;
     protected int damageWeapon;
     protected float shootRate;
@@ -28,8 +27,5 @@ public abstract class Player : MonoBehaviour
         
     }
     
-    public virtual void TakeDamage(int amount)
-    {
-        
-    }
+
 }

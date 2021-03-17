@@ -10,16 +10,15 @@ public class PlayerLife : Player
     [Header("LIFE Parameters")] 
     public int playerLife;
     public int playerMaxLife;
-
+    public Slider slider;
+    
     //public Slider slider;
     private void Awake()
     {
-        life = playerLife;
-        maxLife = playerMaxLife;
         playerLife = playerMaxLife;
-
-      //  slider.maxValue = playerMaxLife;
-       // slider.value = playerMaxLife;
+        slider.maxValue = playerMaxLife;
+        slider.value = playerMaxLife;
+        
     }
     
     void Start()
@@ -30,18 +29,18 @@ public class PlayerLife : Player
   
     void Update()
     {
-        
+
     }
 
     public void PlayerHeal(int amount)
     {
         playerLife += amount;
-       // slider.value = playerLife;
+       slider.value = playerLife;
     }
 
-    public override void TakeDamage(int amount)
+    public void TakeDamage(int amount)
     {
         playerLife -= amount;
-       // slider.value = playerLife;
+       slider.value = playerLife;
     }
 }
