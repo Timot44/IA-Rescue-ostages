@@ -32,6 +32,7 @@ public class PlayerLife : Player
         {
             //TODO Faire une function pour la mort du joueur//
         }
+        
     }
 
     public void PlayerHeal(int amount)

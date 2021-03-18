@@ -90,14 +90,16 @@
             <e p="IAPatroller.cs" t="Include" />
             <e p="PatrollerState.cs" t="Include" />
           </e>
+          <e p="Objects" t="Include">
+            <e p="Ammos.cs" t="Include" />
+            <e p="Gun.cs" t="Include" />
+            <e p="HealthPack.cs" t="Include" />
+          </e>
           <e p="PlayerScripts" t="Include">
             <e p="Player.cs" t="Include" />
             <e p="PlayerLife.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerShoot.cs" t="Include" />
-          </e>
-          <e p="Weapons" t="Include">
-            <e p="Gun.cs" t="Include" />
           </e>
           <e p="Weapons.cs" t="Include" />
         </e>

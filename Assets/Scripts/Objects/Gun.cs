@@ -6,12 +6,6 @@ public class Gun : MonoBehaviour
 {
    public Weapons weaponToAdd;
    
-   
-   
-   
-   
-   
-   
    private void OnTriggerEnter(Collider other)
    {
      
