@@ -746,11 +746,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 7074910706667417054, guid: d25c4ca82562cc64fb1481bfc7675d6b,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 7074910706667417055, guid: d25c4ca82562cc64fb1481bfc7675d6b,
         type: 3}
       propertyPath: m_LocalPosition.x
