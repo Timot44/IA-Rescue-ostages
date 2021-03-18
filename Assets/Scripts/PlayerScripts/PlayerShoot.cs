@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerShoot : Player
@@ -18,15 +19,9 @@ public class PlayerShoot : Player
     public int weaponDamage;
     public int ammo;
     public string weaponName;
-    // Start is called before the first frame update
- 
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public TextMeshProUGUI weaponNameText;
+    public TextMeshProUGUI ammoText;
+    
     void Update()
     {
         if (currentWeapoons)
@@ -35,7 +30,7 @@ public class PlayerShoot : Player
             fireRate = Mathf.Clamp(fireRate, 0, Mathf.Infinity);
         }
        
-
+        
 
         if (Input.GetMouseButtonDown(0) && fireRate <= 0f && currentWeapoons && ammo > 0)
         {
@@ -50,6 +45,8 @@ public class PlayerShoot : Player
         ammo = currentWeapoons.currentAmmo;
         weaponDamage = currentWeapoons.damage;
         weaponName = currentWeapoons.name;
+        weaponNameText.text = weaponName;
+        ammoText.text = ammo.ToString("0");
     }
     private void FixedUpdate()
     {
@@ -59,12 +56,17 @@ public class PlayerShoot : Player
         _cam_shootpoint = Camera.main.transform.forward;
     }
 
+    public void UpdateTextAmmo()
+    {
+        ammoText.text = ammo.ToString("0");
+    }
+
     private void Shoot()
     {
         RaycastHit raycastHit;
         ammo--;
         Debug.DrawRay(_pos_cam, Camera.main.transform.forward * 100, Color.magenta, 3f);
-
+        UpdateTextAmmo();
         
         
          

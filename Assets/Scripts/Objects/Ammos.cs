@@ -13,6 +13,7 @@ public class Ammos : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerShoot>().currentWeapoons)
         {
             other.gameObject.GetComponent<PlayerShoot>().ammo += numAmmoToAdd;
+            other.gameObject.GetComponent<PlayerShoot>().UpdateTextAmmo();
             Destroy(gameObject);
         }
     }
