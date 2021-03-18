@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
    
    
    
-   private void OnTriggerStay(Collider other)
+   private void OnTriggerEnter(Collider other)
    {
      
       if (other.gameObject.GetComponent<PlayerShoot>())

@@ -688,35 +688,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7954177607612139782, guid: 23b466c47d88f024fa8a6277bb077902,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.005
-      objectReference: {fileID: 0}
     - target: {fileID: 7954177607869898817, guid: 23b466c47d88f024fa8a6277bb077902,
         type: 3}
       propertyPath: m_Name
       value: Pistol
-      objectReference: {fileID: 0}
-    - target: {fileID: 7954177607869898819, guid: 23b466c47d88f024fa8a6277bb077902,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 8.017088
-      objectReference: {fileID: 0}
-    - target: {fileID: 7954177607869898819, guid: 23b466c47d88f024fa8a6277bb077902,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 2.380143
-      objectReference: {fileID: 0}
-    - target: {fileID: 7954177607869898819, guid: 23b466c47d88f024fa8a6277bb077902,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 3.8142197
-      objectReference: {fileID: 0}
-    - target: {fileID: 7954177607869898819, guid: 23b466c47d88f024fa8a6277bb077902,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0.12827851
       objectReference: {fileID: 0}
     - target: {fileID: 7954177607869898828, guid: 23b466c47d88f024fa8a6277bb077902,
         type: 3}

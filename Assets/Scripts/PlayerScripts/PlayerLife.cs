@@ -12,7 +12,6 @@ public class PlayerLife : Player
     public int playerMaxLife;
     public Slider slider;
     
-    //public Slider slider;
     private void Awake()
     {
         playerLife = playerMaxLife;
@@ -29,18 +28,21 @@ public class PlayerLife : Player
   
     void Update()
     {
-
+        if (playerLife <= 0)
+        {
+            //TODO Faire une function pour la mort du joueur//
+        }
     }
 
     public void PlayerHeal(int amount)
     {
         playerLife += amount;
-       slider.value = playerLife;
+        slider.value = playerLife;
     }
 
     public void TakeDamage(int amount)
     {
         playerLife -= amount;
-       slider.value = playerLife;
+        slider.value = playerLife;
     }
 }

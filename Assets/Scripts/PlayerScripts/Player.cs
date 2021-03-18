@@ -6,12 +6,8 @@ public abstract class Player : MonoBehaviour
 {
    
     protected float walkSpeed;
-    protected int damageWeapon;
-    protected float shootRate;
-    protected int ammoCount;
     protected bool canDisarm;
-    protected Weapons weapon;
-    protected int currentAmmo;
+  
 
 
 
@@ -22,10 +18,6 @@ public abstract class Player : MonoBehaviour
     }
 
 
-    public virtual void Shoot()
-    {
-        
-    }
-    
+
 
 }

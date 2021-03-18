@@ -5,7 +5,6 @@ public class Weapons : ScriptableObject
 {
     public string name;
     public float fireRate;
-    public float maxFireRate;
     public int currentAmmo;
     public int damage;
     public float range;
