@@ -20,7 +20,7 @@ public abstract class IAParent : MonoBehaviour
     public float baseSpeed;
     public float distanceToChangeWaypoint;
     public Transform[] patrolWaypoint;
-
+    public bool isAttack;
     public virtual void SwitchToState()
     {
     }
