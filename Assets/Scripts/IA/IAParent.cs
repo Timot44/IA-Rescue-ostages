@@ -29,6 +29,10 @@ public abstract class IAParent : MonoBehaviour
     public virtual void TakeDamage(int damage)
     {
         health -= damage;
+        if (health <= 0)
+        {
+            Dead();
+        }
     }
 
     public void Dead()

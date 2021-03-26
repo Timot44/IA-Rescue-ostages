@@ -74,7 +74,7 @@ public class PlayerShoot : Player
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit, currentWeapoons.range,currentWeapoons.layers))
         {
             Debug.Log(raycastHit.collider.name);
-            raycastHit.collider.gameObject.GetComponent<IAParent>().TakeDamage(currentWeapoons.damage);
+            raycastHit.collider.gameObject.GetComponent<IAParent>().TakeDamage(weaponDamage);
         }
         fireRate = currentWeapoons.fireRate;
     }

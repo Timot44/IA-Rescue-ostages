@@ -29,6 +29,7 @@ public class IACac : IAParent
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         currentState = new CacStateP1();
+        health = maxHealth;
     }
 
     // Update is called once per frame
