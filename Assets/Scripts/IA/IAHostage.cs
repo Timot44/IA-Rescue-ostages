@@ -96,19 +96,37 @@ public class IAHostage : MonoBehaviour
 
         // Get all enemies transform
         IAParent[] ias = FindObjectsOfType<IAParent>();
-        Transform[] enemyTransforms = new Transform[ias.Length];
+        List<Transform> enemyTransforms = new List<Transform>();
         for (int i = 0; i < ias.Length; i++)
         {
-            enemyTransforms[i] = ias[i].transform;
+            if (ias[i].isAttack)
+                enemyTransforms.Add(ias[i].transform);
         }
 
+        for (int i = 0; i < numberOfCirclesToCheck; i++)
+        {
+            float circleDistance = (i + 1) * distanceToCheck / numberOfCirclesToCheck;
+            int trueNumberOfPoint = Mathf.RoundToInt(numberOfPointPerCircles *
+                                                     Mathf.Pow(1 - percentDecreasePerCircle,
+                                                         numberOfCirclesToCheck - i - 1));
+            float degreePerPoint = 360 / trueNumberOfPoint;
+
+            for (int y = 0; y < trueNumberOfPoint; y++)
+            {
+                Vector3 pointPosition = new Vector3(circleDistance * Mathf.Sin(Mathf.Deg2Rad * degreePerPoint * y), 0,
+                    circleDistance * Mathf.Cos(Mathf.Deg2Rad * degreePerPoint * y));
+
+                CheckPointSafe(pointPosition, enemyTransforms);
+            }
+        }
+        
         return saveSpot;
     }
 
-    private bool CheckPointSafe(Vector3 pointPos, Transform[] enemyTransforms, Transform[] hostileEnemies)
+    private bool CheckPointSafe(Vector3 pointPos, List<Transform> enemyTransforms)
     {
         // Check is
-        for(int i = 0; i < enemyTransforms.Length; i++)
+        for(int i = 0; i < enemyTransforms.Count; i++)
         {
             if (Vector3.Distance(enemyTransforms[i].position, transform.position) < minDistanceFromEnemies)
                 return false;
@@ -117,7 +135,7 @@ public class IAHostage : MonoBehaviour
         RaycastHit hitSphere;
         if (!Physics.SphereCast(pointPos, .2f, Vector3.down, out hitSphere, .2f, obstaclesLayers))
         {
-            foreach (var enemy in hostileEnemies)
+            foreach (var enemy in enemyTransforms)
             {
                 RaycastHit hit;
                 if (Physics.Linecast(pointPos, enemy.position, obstaclesLayers))
