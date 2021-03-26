@@ -23,13 +23,7 @@ public abstract class CacState
             _index = 0;
          }
       }
-      else
-      {
-         Vector3 dirToPlayer = (ctx.transform.position - ctx.player.position).normalized;
-         Vector3 newPosTarget = ctx.transform.position + (dirToPlayer * 25);
-
-         ctx.agent.SetDestination(newPosTarget);
-      }
+    
    }
 
    public virtual void Attack(IACac ctx)
@@ -37,12 +31,13 @@ public abstract class CacState
       if (ctx.isPlayerDetected)
       {
          ctx.agent.SetDestination(ctx.transform.position);
-         
-
+       
+   
          if (!ctx.isAlreadyAttacked)
          {
             //Logic attack code
             ctx.player.GetComponent<PlayerLife>().TakeDamage(ctx.baseDamage + ctx.damageBoost);
+            
             ctx.isAttack = true;
             ctx.isAlreadyAttacked = true;
             ctx.Invoke(nameof(ctx.ResetAttack), ctx.timeBetweenAttack);
@@ -59,7 +54,7 @@ public abstract class CacState
          ctx.agent.SetDestination(ctx.player.position);
          if (Vector3.Distance(ctx.agent.transform.position, ctx.player.position) <= ctx.agent.stoppingDistance)
          {
-            Debug.Log("IA CAC ATTACK");
+           
             ctx.currentState.Attack(ctx);
          }
          

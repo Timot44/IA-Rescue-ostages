@@ -66,7 +66,7 @@ public class IACac : IAParent
             {
                 if (hit.collider.tag == "Player")
                 {
-                    Debug.Log(hit.collider.name);
+                   
                     isPlayerDetected = true;
                     return true;
                 }

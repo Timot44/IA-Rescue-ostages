@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7954177607612139776}
   - component: {fileID: 7954177607612139777}
   m_Layer: 8
-  m_Name: pistol_child
+  m_Name: carabine_child
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4185ad034a6094d40b3539774fc397ff, type: 2}
+  - {fileID: 2100000, guid: ce30415acfdc05c47a881fe9e3540bfb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,7 +141,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4185ad034a6094d40b3539774fc397ff, type: 2}
+  - {fileID: 2100000, guid: ce30415acfdc05c47a881fe9e3540bfb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

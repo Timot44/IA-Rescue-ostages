@@ -121,6 +121,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  isAttack: 0
   speedBoost: 0
   damageBoost: 0
   isAlreadyAttacked: 0
