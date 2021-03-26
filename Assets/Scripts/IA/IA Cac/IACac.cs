@@ -15,21 +15,11 @@ public class IACac : IAParent
     public NavMeshAgent agent;
     public Transform player;
     // Start is called before the first frame update
-    public override void SwitchToState(int stateIndex)
+    public override void SwitchToState()
     {
-        switch (stateIndex)
-        {
-            case 1:
-                currentState = new CacStateP1();
-                break;
-            case 2:
-                currentState = new CacStateP2();
-                break;
-            default:
-                Debug.LogError("State index do not exist : " + stateIndex);
-                break;
-        }
+       currentState = new CacStateP2();
     }
+
 
     void Start()
     {
