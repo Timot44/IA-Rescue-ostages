@@ -33,19 +33,37 @@ public abstract class CacState
 
    public virtual void Attack(IACac ctx)
    {
-      
+      if (ctx.isPlayerDetected)
+      {
+         ctx.agent.SetDestination(ctx.transform.position);
+         
+         ctx.transform.LookAt(ctx.player);
+
+         if (!ctx.isAlreadyAttacked)
+         {
+            //Logic attack code
+            ctx.player.GetComponent<PlayerLife>().TakeDamage(ctx.baseDamage + ctx.damageBoost);         
+            
+            ctx.isAlreadyAttacked = true;
+            ctx.Invoke(nameof(ctx.ResetAttack), ctx.timeBetweenAttack);
+         }
+      }
    }
 
    public virtual void RunToPlayer(IACac ctx)
    {
       if (ctx.isPlayerDetected)
       {
-         if (ctx)
-         {
-            
-         }
+         ctx.agent.speed = ctx.agent.speed + ctx.speedBoost;
          ctx.agent.SetDestination(ctx.player.position);
-      }
+         if (Vector3.Distance(ctx.agent.transform.position, ctx.player.position) <= ctx.agent.stoppingDistance)
+         {
+            Debug.Log("IA CAC ATTACK");
+            ctx.currentState.Attack(ctx);
+         }
+         
+
+         }
    }
 
 }

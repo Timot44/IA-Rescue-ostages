@@ -5,9 +5,13 @@ using UnityEngine.AI;
 
 public class IACac : IAParent
 {
+    [Header("Settings")]
     public float attackDistance;
     public float speedBoost;
     public int damageBoost;
+    public bool isAlreadyAttacked;
+    public float timeBetweenAttack;
+    
     public bool isPlayerDetected;
     public CacState currentState;
     
@@ -72,6 +76,11 @@ public class IACac : IAParent
         return false;
         
         
+    }
+
+    public void ResetAttack()
+    {
+        isAlreadyAttacked = false;
     }
     
     
