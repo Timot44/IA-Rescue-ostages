@@ -76,6 +76,10 @@ public class IACac : IAParent
         
         
     }
+    public override void HelpPatroller(Transform playerPos)
+    {
+        agent.SetDestination(playerPos.position);
+    }
 
     public void ResetAttack()
     {
