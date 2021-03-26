@@ -30,8 +30,8 @@ public class IADist : IAParent
 
     private void OnDrawGizmos()
     {
-        Debug.DrawRay(transform.position,5*transform.forward,Color.green);
-        Debug.DrawRay(transform.position,5*transform.forward-transform.right*2,Color.magenta);
-        Debug.DrawRay(transform.position,5*transform.forward+transform.right*2,Color.red);
+        Debug.DrawRay(transform.position,15*transform.forward,Color.green);
+        Debug.DrawRay(transform.position,15*transform.forward-transform.right*4,Color.magenta);
+        Debug.DrawRay(transform.position,15*transform.forward+transform.right*4,Color.red);
     }
 }

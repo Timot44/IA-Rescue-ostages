@@ -7,7 +7,7 @@ public class DistStateP2 : DistState
     public DistStateP2(IADist ctx)
     {
         _context = ctx;
-        maxDistance = 10;
+        maxDistance = 30;
     }
 
     public override void Move()
@@ -15,7 +15,7 @@ public class DistStateP2 : DistState
         _timerToShootAgain -= Time.deltaTime;
         Vector3 IAPos = _context.gameObject.transform.position;
         Vector3 IAForward = _context.gameObject.transform.forward * maxDistance;
-        Vector3 IARight = _context.gameObject.transform.right * 2;
+        Vector3 IARight = _context.gameObject.transform.right * 4;
         Ray ray1 = new Ray(IAPos, IAForward);
         Ray ray2 = new Ray(IAPos, IAForward - IARight);
         Ray ray3 = new Ray(IAPos, IAForward + IARight);

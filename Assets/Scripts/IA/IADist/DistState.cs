@@ -20,7 +20,7 @@ public abstract class DistState
         _timerToShootAgain = 2.5f;
         Vector3 IAPos = _context.gameObject.transform.position;
         Vector3 IAForward = _context.gameObject.transform.forward * maxDistance;
-        Vector3 IARight = _context.gameObject.transform.right * 2;
+        Vector3 IARight = _context.gameObject.transform.right * 4;
         Ray ray1 = new Ray(IAPos, IAForward);
         Ray ray2 = new Ray(IAPos, IAForward - IARight);
         Ray ray3 = new Ray(IAPos, IAForward + IARight);
