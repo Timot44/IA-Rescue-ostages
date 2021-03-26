@@ -44,7 +44,11 @@ public class GameManager : MonoBehaviour
 
     public void SwitchPhaseForAll()
     {
-        //TODO faire le changement de phase
+        IAParent[] enemies = FindObjectsOfType<IAParent>();
+        foreach (var IA in enemies)
+        {
+            IA.SwitchToState();
+        }
     }
 
     private void SpawnItem()

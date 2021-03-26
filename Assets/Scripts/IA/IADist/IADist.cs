@@ -18,7 +18,7 @@ public class IADist : IAParent
         currentState.Move();
     }
     
-    public override void SwitchToState(int stateIndex)
+    public override void SwitchToState()
     {
         currentState = new DistStateP2(this);
     }

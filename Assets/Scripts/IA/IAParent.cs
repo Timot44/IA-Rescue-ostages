@@ -18,7 +18,9 @@ public abstract class IAParent : MonoBehaviour
     public float distanceToChangeWaypoint;
     public Transform[] patrolWaypoint;
 
-    public abstract void SwitchToState(int stateIndex);
+    public virtual void SwitchToState()
+    {
+    }
 
     public virtual void HelpPatroller(Transform playerTransform)
     {
