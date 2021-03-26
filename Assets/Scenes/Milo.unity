@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 401333449}
   m_Layer: 0
   m_Name: IA Patroller
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   - {fileID: 1033982706}
   - {fileID: 1551347577}
   callEnemyCount: 5
-  callEnemyMaxDistance: 10
+  callEnemyMaxDistance: 15
   fleeing: 0
   timeToStopFleeing: 20
   agent: {fileID: 0}

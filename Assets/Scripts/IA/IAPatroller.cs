@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class IAPatroller : IAParent
 {
@@ -32,10 +33,15 @@ public class IAPatroller : IAParent
     void CallEnemies()
     {
         GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        int helpCounter = callEnemyCount;
 
         foreach (var enemy in allEnemies)
         {
-            
+            if (Vector3.Distance(enemy.transform.position, transform.position) < callEnemyMaxDistance)
+            {
+                enemy.GetComponent<IAParent>().HelpPatroller();
+                helpCounter--;
+            }
         }
     }
 
