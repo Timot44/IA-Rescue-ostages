@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class CacState
 {
    protected int _index;
+  
    public virtual void Move(IACac ctx)
    {
       if (!ctx.isPlayerDetected)
@@ -37,7 +38,6 @@ public abstract class CacState
       {
          ctx.agent.SetDestination(ctx.transform.position);
          
-         ctx.transform.LookAt(ctx.player);
 
          if (!ctx.isAlreadyAttacked)
          {
@@ -83,6 +83,14 @@ public class CacStateP1: CacState
    
 public class CacStateP2: CacState
 {
+   public CacStateP2(IACac ctx)
+   {
+      ctx.damageBoost = 5;
+      ctx.speedBoost = 2;
+   }
+
+
+
    public override void Move(IACac ctx)
    {
       base.Move(ctx);

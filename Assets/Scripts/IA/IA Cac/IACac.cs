@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class IACac : IAParent
 {
     [Header("Settings")]
-    public float attackDistance;
     public float speedBoost;
     public int damageBoost;
     public bool isAlreadyAttacked;
@@ -21,7 +20,7 @@ public class IACac : IAParent
     // Start is called before the first frame update
     public override void SwitchToState()
     {
-       currentState = new CacStateP2();
+        currentState = new CacStateP2(this);
     }
 
 
@@ -35,7 +34,6 @@ public class IACac : IAParent
     // Update is called once per frame
     void Update()
     {
-        
 
         if (IsPlayerDetected())
         {

@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRange: 10
-  baseDamage: 0
+  baseDamage: 5
   maxHealth: 0
   baseSpeed: 4
   distanceToChangeWaypoint: 1.5
@@ -776,9 +776,10 @@ MonoBehaviour:
   - {fileID: 1908726567}
   - {fileID: 1924747807}
   - {fileID: 1471870734}
-  attackDistance: 0
   speedBoost: 0
   damageBoost: 0
+  isAlreadyAttacked: 0
+  timeBetweenAttack: 1
   isPlayerDetected: 0
   agent: {fileID: 0}
   player: {fileID: 0}
