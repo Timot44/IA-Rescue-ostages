@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aIPlacer: {fileID: 0}
   damageDistance: 4
-  damageAmount: 5
+  damageAmount: 40
   explosionPrefab: {fileID: 6304470781553007842, guid: 864c248312db02946a4ddfbbeca25b92,
     type: 3}
 --- !u!1 &6899148404538161182

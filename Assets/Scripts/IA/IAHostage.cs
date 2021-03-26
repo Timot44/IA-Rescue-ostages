@@ -1,16 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class IAHostage : MonoBehaviour
 {
-    public int health;
-    private int maxHealth;
+    private int health;
+    public int maxHealth = 100;
+    public float correctDistanceFromPlayer = 2f;
 
-    public void SwitchToState(int stateIndex)
-    {
-        
-    }
+    private bool fleeingEnemies;
+    private bool phaseTwo;
+    private NavMeshAgent agent;
+    private Transform player;
 
     public void TakeDamage(int damage)
     {
@@ -23,11 +26,26 @@ public class IAHostage : MonoBehaviour
 
     public void SetStateToPhaseTwo()
     {
-        
+        phaseTwo = true;
     }
 
     public void Dead()
     {
         
+    }
+
+    public void Start()
+    {
+        player = FindObjectOfType<Player>().transform;
+    }
+
+    public void Update()
+    {
+        if (phaseTwo)
+        {
+            if (Vector3.Distance(player.position, transform.position) > correctDistanceFromPlayer)
+            {
+            }
+        }
     }
 }
