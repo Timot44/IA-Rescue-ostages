@@ -204,14 +204,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 0
   baseDamage: 0
-  maxHealth: 3
+  maxHealth: 100
+  slider: {fileID: 0}
   baseSpeed: 0
   distanceToChangeWaypoint: 2
   patrolWaypoint:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  isAttack: 0
   agent: {fileID: 8251582523102670545}
+  miradorTransform: {fileID: 0}
 --- !u!195 &8251582523102670545
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -233,7 +233,8 @@ MonoBehaviour:
   slider: {fileID: 0}
   gameManager: {fileID: 6757040570431827226, guid: 8516a34e20431ed47952c7b40bd3362e,
     type: 3}
-  go_Hostage: {fileID: 0}
+  go_Hostage: {fileID: 8936423522801449679, guid: ca7246040d825e24d83f69c014949bda,
+    type: 3}
 --- !u!1 &1941184131284252800
 GameObject:
   m_ObjectHideFlags: 0

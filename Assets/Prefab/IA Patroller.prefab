@@ -338,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 5
   baseDamage: 1
-  maxHealth: 5
+  maxHealth: 100
   slider: {fileID: 4166220513458096805}
   baseSpeed: 1
   distanceToChangeWaypoint: 1.5
