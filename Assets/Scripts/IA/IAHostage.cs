@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class IAHostage : MonoBehaviour
 {
-    private int health;
+    public int health;
     public int maxHealth = 100;
     public float correctDistanceFromPlayer = 2f;
 
@@ -26,16 +26,20 @@ public class IAHostage : MonoBehaviour
 
     public void SetStateToPhaseTwo()
     {
-        phaseTwo = true;
+        if (!phaseTwo)
+        {
+            phaseTwo = true;
+            GameManager.Instance.SwitchPhaseForAll();
+        }
     }
 
     public void Dead()
     {
-        
     }
 
     public void Start()
     {
+        health = maxHealth;
         player = FindObjectOfType<Player>().transform;
     }
 
@@ -43,8 +47,18 @@ public class IAHostage : MonoBehaviour
     {
         if (phaseTwo)
         {
-            if (Vector3.Distance(player.position, transform.position) > correctDistanceFromPlayer)
+            if (!fleeingEnemies)
+                if (Vector3.Distance(player.position, transform.position) > correctDistanceFromPlayer)
+                {
+                    agent.destination = player.transform.position;
+                }
+                else
+                {
+                    agent.destination = transform.position;
+                }
+            else
             {
+                
             }
         }
     }
