@@ -12,9 +12,13 @@ public class IAHostage : MonoBehaviour
         
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        
+        health -= damage;
+        if (health <= 0)
+        {
+            Dead();
+        }
     }
 
     public void SetStateToPhaseTwo()
