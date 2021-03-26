@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class PlayerNearDetection : MonoBehaviour
 {
+    [SerializeField]
+    private IAHostage ia;
     private void OnTriggerEnter(Collider other)
     {
-        GetComponentInParent<IAHostage>().SetStateToPhaseTwo();
+        ia.SetStateToPhaseTwo();
     }
 }
