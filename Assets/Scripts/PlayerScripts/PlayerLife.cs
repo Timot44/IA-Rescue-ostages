@@ -11,7 +11,9 @@ public class PlayerLife : Player
     public int playerLife;
     public int playerMaxLife;
     public Slider slider;
-    
+
+    public GameManager gameManager;
+    public GameObject go_Hostage;
     private void Awake()
     {
         playerLife = playerMaxLife;
@@ -31,6 +33,7 @@ public class PlayerLife : Player
         if (playerLife <= 0)
         {
             //TODO Faire une function pour la mort du joueur//
+            gameManager.RespawnPlayer(gameObject, go_Hostage);
         }
         
         

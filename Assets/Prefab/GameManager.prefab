@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6757040570431827227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6757040570431827229}
+  - component: {fileID: 6757040570431827226}
+  - component: {fileID: 6757040570431827228}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6757040570431827229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757040570431827227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.37322277, y: 1.6875429, z: -2.6692536}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6757040570431827226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757040570431827227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2113026e133772469f67ba86724702b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSpawnable:
+  - {fileID: 6748585897760785371, guid: 1f00118fd46a75e4e8df8e2a5bb49907, type: 3}
+  - {fileID: 7954177607869898817, guid: 23b466c47d88f024fa8a6277bb077902, type: 3}
+  - {fileID: 4928290056754401619, guid: 15c2ccb19d6bace47b1ece9a216a5ef0, type: 3}
+  placeToSpawnItems:
+  - {fileID: 0}
+  - {fileID: 0}
+  playerRespawnPoint: {fileID: 0}
+  hostageRespawnPoint: {fileID: 0}
+  initialTimer: 2
+--- !u!114 &6757040570431827228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757040570431827227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abf0190c2a35c544bc0f8f0c11b155b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Bullet
+    prefab: {fileID: 2053270035816475734, guid: 140cdc8794577c942932a8f4df929a82,
+      type: 3}
+    size: 10
