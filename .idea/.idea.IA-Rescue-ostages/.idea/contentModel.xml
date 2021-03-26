@@ -75,6 +75,7 @@
           <e p="Bilboard.cs" t="Include" />
           <e p="BulletBehaviour.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
+          <e p="FinishTrigger.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="IA" t="Include">
             <e p="HostageState.cs" t="Include" />

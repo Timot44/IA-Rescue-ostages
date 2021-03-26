@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     private List<GameObject> _objectSpawned = new List<GameObject>(2);
     
     public List<Transform> placeToSpawnItems;
+
+    public GameObject panelWin;
     
     public Transform playerRespawnPoint;
     public Transform hostageRespawnPoint;
@@ -17,7 +19,7 @@ public class GameManager : MonoBehaviour
     private float _timerToSpawnItem;
     public float initialTimer;
     
-    private bool _isPhaseTwo;
+    public bool isPhaseTwo;
     #region singleton
 
     public static GameManager Instance;
@@ -50,7 +52,7 @@ public class GameManager : MonoBehaviour
 
     public void RespawnPlayer(GameObject player,GameObject hostage)
     {
-        if (_isPhaseTwo)
+        if (isPhaseTwo)
         {
             player.transform.position = playerRespawnPoint.position;
             player.GetComponent<PlayerLife>().playerLife = player.GetComponent<PlayerLife>().playerMaxLife;
@@ -65,7 +67,7 @@ public class GameManager : MonoBehaviour
     
     public void SwitchPhaseForAll()
     {
-        _isPhaseTwo = true;
+        isPhaseTwo = true;
         IAParent[] enemies = FindObjectsOfType<IAParent>();
         foreach (var IA in enemies)
         {
@@ -93,5 +95,10 @@ public class GameManager : MonoBehaviour
             GameObject itemInstantiated = Instantiate(itemToSpawn, placeToSpawnItem.position, Quaternion.identity);
             _objectSpawned.Add(itemInstantiated);
         }
+    }
+
+    public void Win()
+    {
+        panelWin.SetActive(true);
     }
 }
