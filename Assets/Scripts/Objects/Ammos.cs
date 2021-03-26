@@ -10,7 +10,7 @@ public class Ammos : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<PlayerShoot>().currentWeapoons)
+        if (other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<PlayerShoot>().currentWeapoons)
         {
             other.gameObject.GetComponent<PlayerShoot>().ammo += numAmmoToAdd;
             other.gameObject.GetComponent<PlayerShoot>().UpdateTextAmmo();

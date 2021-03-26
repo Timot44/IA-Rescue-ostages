@@ -10,7 +10,7 @@ public class HealthPack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<PlayerLife>().playerLife < other.gameObject.GetComponent<PlayerLife>().playerMaxLife)
+        if (other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<PlayerLife>().playerLife < other.gameObject.GetComponent<PlayerLife>().playerMaxLife)
         {
             other.gameObject.GetComponent<PlayerLife>().PlayerHeal(healthToAdd);
             Destroy(gameObject);

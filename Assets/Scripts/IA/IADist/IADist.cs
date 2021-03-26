@@ -17,9 +17,15 @@ public class IADist : IAParent
     {
         currentState.Move();
     }
+    
     public override void SwitchToState(int stateIndex)
     {
         currentState = new DistStateP2(this);
+    }
+
+    public override void HelpPatroller(Transform playerPos)
+    {
+        agent.SetDestination(playerPos.position);
     }
 
     private void OnDrawGizmos()

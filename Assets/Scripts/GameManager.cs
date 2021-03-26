@@ -6,10 +6,10 @@ public class GameManager : MonoBehaviour
     public List<GameObject> itemSpawnable;
 
     public List<Transform> placeToSpawnItems;
-
+    private List<GameObject> _objectSpawned = new List<GameObject>(2);
     public Transform currentRespawnPoint;
     private float _timerToSpawnItem;
-    private float _initialTimer;
+    public float initialTimer;
     public bool isPhaseTwo;
 
     #region singleton
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _initialTimer = _timerToSpawnItem;
+         _timerToSpawnItem = initialTimer;
     }
 
     // Update is called once per frame
@@ -49,11 +49,21 @@ public class GameManager : MonoBehaviour
 
     private void SpawnItem()
     {
-        _timerToSpawnItem = _initialTimer;
+        foreach (var obj in _objectSpawned)
+        {
+            if (obj !=null)
+            {
+                DestroyImmediate(obj,true);
+            }
+            
+        }
+        _objectSpawned.Clear();
+        _timerToSpawnItem = initialTimer;
         foreach (var placeToSpawnItem in placeToSpawnItems)
         {
             GameObject itemToSpawn = itemSpawnable[Random.Range(0, itemSpawnable.Count - 1)];
-            Instantiate(itemToSpawn, placeToSpawnItem.position, Quaternion.identity);
+            GameObject itemInstantiated = Instantiate(itemToSpawn, placeToSpawnItem.position, Quaternion.identity);
+            _objectSpawned.Add(itemInstantiated);
         }
     }
 }

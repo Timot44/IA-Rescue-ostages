@@ -2,9 +2,6 @@
 
 public class DistStateP1 : DistState
 {
-    private IADist _context;
-
-
     public DistStateP1(IADist ctx)
     {
         _context = ctx;
@@ -35,22 +32,23 @@ public class DistStateP1 : DistState
         {
             ray1, ray2, ray3
         };
+        _timerToShootAgain -= Time.deltaTime;
+        if (_timerToShootAgain <= 2)
+        {
+            _context.agent.isStopped = false;
+        }
+
         RaycastHit hit;
         foreach (var ray in rays)
         {
             if (Physics.Raycast(ray, out hit, maxDistance))
             {
-                if (hit.collider.tag == "Player")
+                if (hit.collider.tag == "Player" && _timerToShootAgain <= 0)
                 {
+                    _context.agent.isStopped = true;
                     Shoot();
                 }
             }
         }
-    }
-
-    public override void Shoot()
-    {
-        Debug.Log("je tire sur le joueur");
-        //TODO faire le tir
     }
 }
