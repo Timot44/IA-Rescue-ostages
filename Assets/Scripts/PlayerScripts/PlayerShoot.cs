@@ -48,6 +48,7 @@ public class PlayerShoot : Player
         weaponNameText.text = weaponName;
         ammoText.text = ammo.ToString("0");
     }
+    
     private void FixedUpdate()
     {
         //Update la pos et la rotation de la camera pour avoir un meilleur tir
