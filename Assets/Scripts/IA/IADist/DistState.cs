@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class DistState
 {
@@ -33,10 +31,10 @@ public abstract class DistState
         {
             if (Physics.Raycast(ray, out hit, maxDistance))
             {
-                if (hit.collider.tag == "Player")
+                if (hit.collider.CompareTag("Player"))
                 {
-                    Debug.Log("je tire sur le joueur");
-                    hit.collider.GetComponent<PlayerLife>().TakeDamage(10);
+                    _context.transform.LookAt(hit.collider.gameObject.transform);
+                    ObjectPooler.instance.SpawnFromPool("Bullet", _context.transform.position,_context.transform.rotation);
                     return ;
                 }
             }
