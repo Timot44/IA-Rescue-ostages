@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
         _timerToSpawnItem = initialTimer;
         foreach (var placeToSpawnItem in placeToSpawnItems)
         {
-            GameObject itemToSpawn = itemSpawnable[Random.Range(0, itemSpawnable.Count - 1)];
+            GameObject itemToSpawn = itemSpawnable[Random.Range(0, itemSpawnable.Count)];
             GameObject itemInstantiated = Instantiate(itemToSpawn, placeToSpawnItem.position, Quaternion.identity);
             _objectSpawned.Add(itemInstantiated);
         }
