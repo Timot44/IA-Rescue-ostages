@@ -11,7 +11,7 @@ public abstract class CacState
       if (!ctx.isPlayerDetected)
       {
          ctx.agent.SetDestination(ctx.patrolWaypoint[_index].position);
-            
+         ctx.isAttack = false;
          if (Vector3.Distance(ctx.gameObject.transform.position, ctx.patrolWaypoint[_index].position) <=
              ctx.distanceToChangeWaypoint)
          {
@@ -42,8 +42,8 @@ public abstract class CacState
          if (!ctx.isAlreadyAttacked)
          {
             //Logic attack code
-            ctx.player.GetComponent<PlayerLife>().TakeDamage(ctx.baseDamage + ctx.damageBoost);         
-            
+            ctx.player.GetComponent<PlayerLife>().TakeDamage(ctx.baseDamage + ctx.damageBoost);
+            ctx.isAttack = true;
             ctx.isAlreadyAttacked = true;
             ctx.Invoke(nameof(ctx.ResetAttack), ctx.timeBetweenAttack);
          }
@@ -54,6 +54,7 @@ public abstract class CacState
    {
       if (ctx.isPlayerDetected)
       {
+         ctx.isAttack = false;
          ctx.agent.speed = ctx.agent.speed + ctx.speedBoost;
          ctx.agent.SetDestination(ctx.player.position);
          if (Vector3.Distance(ctx.agent.transform.position, ctx.player.position) <= ctx.agent.stoppingDistance)
