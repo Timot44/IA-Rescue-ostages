@@ -14,17 +14,12 @@ public class PlayerLife : Player
 
     public GameManager gameManager;
     public GameObject go_Hostage;
-    private void Awake()
+    
+    void Start()
     {
         playerLife = playerMaxLife;
         slider.maxValue = playerMaxLife;
         slider.value = playerMaxLife;
-        
-    }
-    
-    void Start()
-    {
-        
     }
 
   
