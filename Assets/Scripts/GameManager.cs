@@ -1,17 +1,23 @@
 ﻿using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> itemSpawnable;
 
-    public List<Transform> placeToSpawnItems;
     private List<GameObject> _objectSpawned = new List<GameObject>(2);
-    public Transform currentRespawnPoint;
+    
+    public List<Transform> placeToSpawnItems;
+    
+    public Transform playerRespawnPoint;
+    public Transform hostageRespawnPoint;
+    
     private float _timerToSpawnItem;
     public float initialTimer;
-    public bool isPhaseTwo;
-
+    
+    private bool _isPhaseTwo;
     #region singleton
 
     public static GameManager Instance;
@@ -42,8 +48,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void RespawnPlayer(GameObject player,GameObject hostage)
+    {
+        if (_isPhaseTwo)
+        {
+            player.transform.position = playerRespawnPoint.position;
+            player.GetComponent<PlayerLife>().playerLife = player.GetComponent<PlayerLife>().playerMaxLife;
+            hostage.transform.position = hostageRespawnPoint.position;
+            hostage.GetComponent<IAHostage>().health = hostage.GetComponent<IAHostage>().maxHealth;
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+    
     public void SwitchPhaseForAll()
     {
+        _isPhaseTwo = true;
         IAParent[] enemies = FindObjectsOfType<IAParent>();
         foreach (var IA in enemies)
         {
