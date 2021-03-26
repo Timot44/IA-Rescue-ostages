@@ -4,27 +4,27 @@ public class DistStateP1 : DistState
 {
     public DistStateP1(IADist ctx)
     {
-        _context = ctx;
+        context = ctx;
         maxDistance = 15;
     }
 
     public override void Move()
     {
-        _context.agent.SetDestination(_context.patrolWaypoint[index].position);
-        if (Vector3.Distance(_context.gameObject.transform.position, _context.patrolWaypoint[index].position) <=
-            _context.distanceToChangeWaypoint)
+        context.agent.SetDestination(context.patrolWaypoint[index].position);
+        if (Vector3.Distance(context.gameObject.transform.position, context.patrolWaypoint[index].position) <=
+            context.distanceToChangeWaypoint)
         {
             index++;
         }
 
-        if (index >= _context.patrolWaypoint.Length)
+        if (index >= context.patrolWaypoint.Length)
         {
             index = 0;
         }
 
-        Vector3 IAPos = _context.gameObject.transform.position;
-        Vector3 IAForward = _context.gameObject.transform.forward * maxDistance;
-        Vector3 IARight = _context.gameObject.transform.right * 4;
+        Vector3 IAPos = context.gameObject.transform.position;
+        Vector3 IAForward = context.gameObject.transform.forward * maxDistance;
+        Vector3 IARight = context.gameObject.transform.right * 4;
         Ray ray1 = new Ray(IAPos, IAForward);
         Ray ray2 = new Ray(IAPos, IAForward - IARight);
         Ray ray3 = new Ray(IAPos, IAForward + IARight);
@@ -32,10 +32,10 @@ public class DistStateP1 : DistState
         {
             ray1, ray2, ray3
         };
-        _timerToShootAgain -= Time.deltaTime;
-        if (_timerToShootAgain <= 2)
+        timerToShootAgain -= Time.deltaTime;
+        if (timerToShootAgain <= 2)
         {
-            _context.agent.isStopped = false;
+            context.agent.isStopped = false;
         }
 
         RaycastHit hit;
@@ -43,9 +43,9 @@ public class DistStateP1 : DistState
         {
             if (Physics.Raycast(ray, out hit, maxDistance))
             {
-                if (hit.collider.tag == "Player" && _timerToShootAgain <= 0)
+                if (hit.collider.tag == "Player" && timerToShootAgain <= 0)
                 {
-                    _context.agent.isStopped = true;
+                    context.agent.isStopped = true;
                     Shoot();
                 }
             }

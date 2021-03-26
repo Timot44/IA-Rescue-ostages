@@ -6,19 +6,20 @@ public abstract class DistState
     
     protected int index;
     
-    protected IADist _context;
+    protected IADist context;
     
-    protected float _timerToShootAgain = 2f;
+    protected float timerToShootAgain = 2f;
+    
     public virtual void Move()
     {
         
     }
-    public virtual void Shoot()
+    protected void Shoot()
     {
-        _timerToShootAgain = 2.5f;
-        Vector3 IAPos = _context.gameObject.transform.position;
-        Vector3 IAForward = _context.gameObject.transform.forward * maxDistance;
-        Vector3 IARight = _context.gameObject.transform.right * 4;
+        timerToShootAgain = 2.5f;
+        Vector3 IAPos = context.gameObject.transform.position;
+        Vector3 IAForward = context.gameObject.transform.forward * maxDistance;
+        Vector3 IARight = context.gameObject.transform.right * 4;
         Ray ray1 = new Ray(IAPos, IAForward);
         Ray ray2 = new Ray(IAPos, IAForward - IARight);
         Ray ray3 = new Ray(IAPos, IAForward + IARight);
@@ -33,8 +34,8 @@ public abstract class DistState
             {
                 if (hit.collider.CompareTag("Player"))
                 {
-                    _context.transform.LookAt(hit.collider.gameObject.transform);
-                    ObjectPooler.instance.SpawnFromPool("Bullet", _context.transform.position,_context.transform.rotation);
+                    context.transform.LookAt(hit.collider.gameObject.transform);
+                    ObjectPooler.instance.SpawnFromPool("Bullet", context.transform.position,context.transform.rotation);
                     return ;
                 }
             }
