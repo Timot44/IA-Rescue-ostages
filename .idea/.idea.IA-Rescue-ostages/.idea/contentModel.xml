@@ -72,7 +72,11 @@
         </e>
         <e p="PlayerNearDetection.cs" t="Include" />
         <e p="Scripts" t="Include">
+<<<<<<< Updated upstream
           <e p="BulletBehaviour.cs" t="Include" />
+=======
+          <e p="Bilboard.cs" t="Include" />
+>>>>>>> Stashed changes
           <e p="CameraController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="IA" t="Include">

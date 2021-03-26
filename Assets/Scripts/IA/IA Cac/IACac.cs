@@ -30,6 +30,7 @@ public class IACac : IAParent
         player = GameObject.FindGameObjectWithTag("Player").transform;
         currentState = new CacStateP1();
         health = maxHealth;
+        SetBarMax(maxHealth);
     }
 
     // Update is called once per frame

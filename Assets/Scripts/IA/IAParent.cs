@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class IAParent : MonoBehaviour
 {
@@ -10,8 +11,10 @@ public abstract class IAParent : MonoBehaviour
     
     public int baseDamage;
     
+    [Header("Life parameters")]
     protected int health;
     public int maxHealth;
+    public Slider slider;
     
     [Header("Movement Parameters")]
     public float baseSpeed;
@@ -29,6 +32,7 @@ public abstract class IAParent : MonoBehaviour
     public virtual void TakeDamage(int damage)
     {
         health -= damage;
+        slider.value = health;
         if (health <= 0)
         {
             Dead();
@@ -43,5 +47,11 @@ public abstract class IAParent : MonoBehaviour
     public void Start()
     {
         health = maxHealth;
+    }
+
+    public void SetBarMax(int amount)
+    {
+        slider.maxValue = amount;
+        slider.value = amount;
     }
 }
