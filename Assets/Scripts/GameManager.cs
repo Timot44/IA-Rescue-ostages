@@ -51,11 +51,13 @@ public class GameManager : MonoBehaviour
     {
         foreach (var obj in _objectSpawned)
         {
-            if (obj !=null)
+            foreach (var place in placeToSpawnItems)
             {
-                DestroyImmediate(obj,true);
+                if (obj !=null && obj.transform.position == place.position)
+                {
+                    DestroyImmediate(obj,true);
+                }
             }
-            
         }
         _objectSpawned.Clear();
         _timerToSpawnItem = initialTimer;
