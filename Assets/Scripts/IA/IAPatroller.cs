@@ -7,15 +7,17 @@ using Random = UnityEngine.Random;
 
 public class IAPatroller : IAParent
 {
-    private bool minePlaced;
+    public bool minePlaced;
     
     [Header("Call parameters")]
-    public int callEnemyCount;
-    public float callEnemyMaxDistance;
+    public int callEnemyCount = 5;
+    public float callEnemyMaxDistance = 15;
     
     [Header("Behavior")]
     public bool fleeing;
-    public float timeToStopFleeing;
+    public float timeToStopFleeing = 20;
+    public float placeMineTime = 10f;
+    public GameObject prefabMine;
 
     private PatrollerState currentState;
     
@@ -39,7 +41,7 @@ public class IAPatroller : IAParent
         {
             if (Vector3.Distance(enemy.transform.position, transform.position) < callEnemyMaxDistance)
             {
-                enemy.GetComponent<IAParent>().HelpPatroller();
+                enemy.GetComponent<IAParent>().HelpPatroller(player);
                 helpCounter--;
             }
         }
@@ -61,15 +63,14 @@ public class IAPatroller : IAParent
         }
     }
     
-    
-
-    
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         currentState = new PatrollerStateP1();
+        InvokeRepeating("AttemptToPlaceMine", 0, placeMineTime);
     }
+    
     void Update()
     {
         currentState.Move(this);
@@ -78,6 +79,16 @@ public class IAPatroller : IAParent
         {
             Flee();
         }
+    }
+
+    void AttemptToPlaceMine()
+    {
+        currentState.PlaceMine(this);
+    }
+
+    void PlaceMine()
+    {
+        Instantiate(prefabMine, transform.position, Quaternion.identity);
     }
 
     public bool DetectPlayer()
@@ -109,7 +120,7 @@ public class IAPatroller : IAParent
         fleeing = false;
     }
 
-    public override void HelpPatroller()
+    public override void HelpPatroller(Transform playerTransform)
     {
     }
 

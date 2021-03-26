@@ -537,10 +537,13 @@ MonoBehaviour:
   - {fileID: 415084686}
   - {fileID: 1033982706}
   - {fileID: 1551347577}
+  minePlaced: 0
   callEnemyCount: 5
   callEnemyMaxDistance: 15
   fleeing: 0
   timeToStopFleeing: 20
+  placeMineTime: 10
+  prefabMine: {fileID: 0}
   agent: {fileID: 0}
   player: {fileID: 0}
 --- !u!136 &401333445

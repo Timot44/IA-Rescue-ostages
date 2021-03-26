@@ -47,5 +47,10 @@ public class PatrollerStateP2 : PatrollerState
     public override void PlaceMine(IAPatroller ctx)
     {
         base.PlaceMine(ctx);
+        if (!ctx.minePlaced)
+        {
+            ctx.minePlaced = true;
+            
+        }
     }
 }

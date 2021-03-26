@@ -20,9 +20,8 @@ public abstract class IAParent : MonoBehaviour
 
     public abstract void SwitchToState(int stateIndex);
 
-    public virtual void HelpPatroller()
+    public virtual void HelpPatroller(Transform playerTransform)
     {
-        
     }
     
     public virtual void TakeDamage(int damage)
