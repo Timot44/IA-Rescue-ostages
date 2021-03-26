@@ -6,7 +6,7 @@ public class IADist : IAParent
     public DistState currentState;
 
     public NavMeshAgent agent;
-
+    public Transform miradorTransform;
    void Start()
     {
         currentState = new DistStateP1(this);
