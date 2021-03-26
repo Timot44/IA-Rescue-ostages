@@ -11,6 +11,7 @@ public class IADist : IAParent
     {
         currentState = new DistStateP1(this);
         health = maxHealth;
+        SetBarMax(maxHealth);
     }
 
     void Update()
