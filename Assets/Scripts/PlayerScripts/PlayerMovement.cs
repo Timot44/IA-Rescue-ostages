@@ -9,7 +9,6 @@ public class PlayerMovement : Player
     [Header("Parameters")]
     public float speed;
     public CharacterController controller;
-    public float gravity = -9.6f;
     private Vector3 _velocity;
 
     private float moveX;
@@ -18,7 +17,7 @@ public class PlayerMovement : Player
     // Start is called before the first frame update
     private void Awake()
     {
-        walkSpeed = speed;
+      
     }
 
     void Start()
@@ -26,12 +25,10 @@ public class PlayerMovement : Player
         
     }
 
-    public override void Movement()
+    private void Movement()
     {
         Vector3 move = (transform.right * moveX) + (transform.forward * moveZ);
-        
-        controller.Move(move * (walkSpeed * Time.deltaTime));
-        
+        controller.Move(move * (speed * Time.deltaTime));
     }
 
     // Update is called once per frame

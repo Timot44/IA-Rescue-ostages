@@ -4,20 +4,13 @@ using UnityEngine;
 
 public abstract class Player : MonoBehaviour
 {
-   
-    protected float walkSpeed;
+    
     protected bool canDisarm;
-  
 
 
 
-
-    public virtual void Movement()
+    public virtual void DisarmMine()
     {
         
     }
-
-
-
-
 }
