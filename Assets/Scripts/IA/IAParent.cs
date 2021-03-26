@@ -44,10 +44,7 @@ public abstract class IAParent : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Start()
-    {
-        health = maxHealth;
-    }
+ 
 
     public void SetBarMax(int amount)
     {

@@ -24,7 +24,7 @@ public class IACac : IAParent
     }
 
 
-    void Start()
+     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;

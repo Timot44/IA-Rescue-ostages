@@ -6,8 +6,8 @@ public class IADist : IAParent
     public DistState currentState;
 
     public NavMeshAgent agent;
-    
-    void Start()
+
+   void Start()
     {
         currentState = new DistStateP1(this);
         health = maxHealth;
