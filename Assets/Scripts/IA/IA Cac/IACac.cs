@@ -17,7 +17,7 @@ public class IACac : IAParent
     
     
     public NavMeshAgent agent;
-    public Transform player;
+    
 
     
     public GameObject obj_spoted;
@@ -31,7 +31,7 @@ public class IACac : IAParent
      void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        
         currentState = new CacStateP1();
         health = maxHealth;
         SetBarMax(maxHealth);
