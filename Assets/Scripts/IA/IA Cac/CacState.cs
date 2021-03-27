@@ -36,7 +36,14 @@ public abstract class CacState
          if (!ctx.isAlreadyAttacked)
          {
             //Logic attack code
-            ctx.player.GetComponent<PlayerLife>().TakeDamage(ctx.baseDamage + ctx.damageBoost);
+            if (ctx.obj_spoted.GetComponent<IAHostage>())
+            {
+               ctx.obj_spoted.GetComponent<IAHostage>().TakeDamage(ctx.baseDamage + ctx.damageBoost);
+            }
+            else
+            {
+               ctx.obj_spoted.GetComponent<PlayerLife>().TakeDamage(ctx.baseDamage + ctx.damageBoost);
+            }
             
             ctx.isAttack = true;
             ctx.isAlreadyAttacked = true;
@@ -50,16 +57,17 @@ public abstract class CacState
       if (ctx.isPlayerDetected)
       {
          ctx.isAttack = false;
-         ctx.agent.speed = ctx.agent.speed + ctx.speedBoost;
-         ctx.agent.SetDestination(ctx.player.position);
-         if (Vector3.Distance(ctx.agent.transform.position, ctx.player.position) <= ctx.agent.stoppingDistance)
+         ctx.agent.speed += ctx.speedBoost;
+         ctx.agent.speed = Mathf.Clamp(ctx.agent.speed, 0, 5.5f);
+         ctx.agent.SetDestination(ctx.obj_spoted.transform.position);
+         if (Vector3.Distance(ctx.agent.transform.position, ctx.obj_spoted.transform.position) <= ctx.agent.stoppingDistance)
          {
            
             ctx.currentState.Attack(ctx);
          }
          
 
-         }
+      }
    }
 
 }
@@ -83,6 +91,7 @@ public class CacStateP2: CacState
    {
       ctx.damageBoost = 5;
       ctx.speedBoost = 2;
+      
    }
 
 

@@ -12,11 +12,15 @@ public class IACac : IAParent
     public float timeBetweenAttack;
     
     public bool isPlayerDetected;
+   
     public CacState currentState;
     
     
     public NavMeshAgent agent;
     public Transform player;
+
+    
+    public GameObject obj_spoted;
     // Start is called before the first frame update
     public override void SwitchToState()
     {
@@ -66,7 +70,8 @@ public class IACac : IAParent
             {
                 if (hit.collider.tag == "Player")
                 {
-                   
+                    obj_spoted = hit.collider.gameObject;
+                    
                     isPlayerDetected = true;
                     return true;
                 }
