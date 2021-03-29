@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelUserStore">
-    <attachedFolders>
-      <Path>../../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.probuilder@4.4.0</Path>
-      <Path>../../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.settings-manager@1.0.3</Path>
-    </attachedFolders>
+    <attachedFolders />
     <explicitIncludes>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
@@ -26,11 +23,7 @@
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Library</Path>
-<<<<<<< Updated upstream
-      <Path>Logs</Path>
       <Path>Temp</Path>
-=======
->>>>>>> Stashed changes
       <Path>obj</Path>
     </explicitExcludes>
   </component>

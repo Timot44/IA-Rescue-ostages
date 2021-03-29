@@ -16,7 +16,14 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<PlayerLife>().TakeDamage(damage);
+            if (other.GetComponent<PlayerLife>())
+            {
+                other.GetComponent<PlayerLife>().TakeDamage(damage);
+            }
+            else if (other.GetComponent<IAHostage>())
+            {
+                other.GetComponent<IAHostage>().TakeDamage(damage);
+            }
             gameObject.SetActive(false);
         }
     }
