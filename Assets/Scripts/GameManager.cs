@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         }
     }
     
@@ -103,4 +103,7 @@ public class GameManager : MonoBehaviour
     {
         panelWin.SetActive(true);
     }
+    
+    
+    
 }
