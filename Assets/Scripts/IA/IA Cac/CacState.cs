@@ -8,10 +8,12 @@ public abstract class CacState
   
    public virtual void Move(IACac ctx)
    {
+      ctx.isAttack = false;
       if (!ctx.isPlayerDetected)
       {
+         
          ctx.agent.SetDestination(ctx.patrolWaypoint[_index].position);
-         ctx.isAttack = false;
+         
          if (Vector3.Distance(ctx.gameObject.transform.position, ctx.patrolWaypoint[_index].position) <=
              ctx.distanceToChangeWaypoint)
          {
@@ -56,7 +58,7 @@ public abstract class CacState
    {
       if (ctx.isPlayerDetected)
       {
-         ctx.isAttack = false;
+         
          ctx.agent.speed += ctx.speedBoost;
          ctx.agent.speed = Mathf.Clamp(ctx.agent.speed, 0, 5.5f);
          ctx.agent.SetDestination(ctx.obj_spoted.transform.position);

@@ -129,7 +129,7 @@ MonoBehaviour:
   timeBetweenAttack: 1
   isPlayerDetected: 0
   agent: {fileID: 0}
-  player: {fileID: 0}
+  obj_spoted: {fileID: 0}
 --- !u!195 &1070517216672103159
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -254,12 +254,12 @@ PrefabInstance:
     - target: {fileID: 377039770870074264, guid: 2ae8b9dfc0a4bd547a995258c76aee8e,
         type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 377039770870074264, guid: 2ae8b9dfc0a4bd547a995258c76aee8e,
         type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 377039770870074264, guid: 2ae8b9dfc0a4bd547a995258c76aee8e,
         type: 3}
@@ -274,17 +274,17 @@ PrefabInstance:
     - target: {fileID: 377039771032797556, guid: 2ae8b9dfc0a4bd547a995258c76aee8e,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.37214354
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 377039771032797556, guid: 2ae8b9dfc0a4bd547a995258c76aee8e,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.7735849
+      value: 0.0627451
       objectReference: {fileID: 0}
     - target: {fileID: 377039771032797556, guid: 2ae8b9dfc0a4bd547a995258c76aee8e,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.25907797
+      value: 0.08235294
       objectReference: {fileID: 0}
     - target: {fileID: 377039771032797559, guid: 2ae8b9dfc0a4bd547a995258c76aee8e,
         type: 3}

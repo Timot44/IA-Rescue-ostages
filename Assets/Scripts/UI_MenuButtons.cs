@@ -10,6 +10,10 @@ public class UI_MenuButtons : MonoBehaviour
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
    }
 
+   public void Play()
+   {
+      SceneManager.LoadScene(1, LoadSceneMode.Single);
+   }
 
    public void Quit()
    {
