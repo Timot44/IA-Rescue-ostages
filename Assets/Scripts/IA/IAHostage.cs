@@ -20,12 +20,17 @@ public class IAHostage : MonoBehaviour
     public float percentDecreasePerCircle = .33f;
     public LayerMask obstaclesLayers;
     public float atSaveSpotDistance = 1f;
+    public float checkIfIsAttackedTime = 1f;
 
     private bool fleeingEnemies;
     private bool phaseTwo;
+    private float saveSpotTimer = 1f;
+        
     private Vector3 saveSpotPos;
-    
     private Transform player;
+    private IAParent[] enemies;
+    
+    
 
     public void TakeDamage(int damage)
     {
@@ -42,6 +47,7 @@ public class IAHostage : MonoBehaviour
         {
             phaseTwo = true;
             GameManager.Instance.SwitchPhaseForAll();
+            InvokeRepeating("IsAttacked", 0, checkIfIsAttackedTime);
         }
     }
 
@@ -53,6 +59,7 @@ public class IAHostage : MonoBehaviour
     {
         health = maxHealth;
         player = FindObjectOfType<Player>().transform;
+        enemies = FindObjectsOfType<IAParent>();
     }
 
     public void Update()
@@ -74,12 +81,43 @@ public class IAHostage : MonoBehaviour
                 {
                     saveSpotPos = SearchSaveSpot();
                 }
-                if (AtSaveSpot())
+
+                if (saveSpotPos != Vector3.zero && AtSaveSpot() && saveSpotTimer <= 0)
                 {
-                    
+                    List<Transform> enemyTransforms = new List<Transform>();
+                    for (int i = 0; i < enemies.Length; i++)
+                    {
+                        if (enemies[i].isAttack)
+                            enemyTransforms.Add(enemies[i].transform);
+                    }
+
+                    if (!CheckPointSafe(transform.position, enemyTransforms))
+                    {
+                        SearchSaveSpot();
+                    }
+
+                    saveSpotTimer = 1f;
+                }
+                else
+                {
+                    saveSpotTimer -= Time.deltaTime;
                 }
             }
         }
+    }
+
+    private void IsAttacked()
+    {
+        foreach (var ias in enemies)
+        {
+            if (ias.isAttack)
+            {
+                fleeingEnemies = true;
+                return;
+            }
+        }
+
+        fleeingEnemies = false;
     }
 
     private bool AtSaveSpot()
@@ -92,15 +130,14 @@ public class IAHostage : MonoBehaviour
 
     private Vector3 SearchSaveSpot()
     {
-        Vector3 saveSpot = new Vector3();
+        Vector3 saveSpot = Vector3.zero;
 
         // Get all enemies transform
-        IAParent[] ias = FindObjectsOfType<IAParent>();
         List<Transform> enemyTransforms = new List<Transform>();
-        for (int i = 0; i < ias.Length; i++)
+        for (int i = 0; i < enemies.Length; i++)
         {
-            if (ias[i].isAttack)
-                enemyTransforms.Add(ias[i].transform);
+            if (enemies[i].isAttack)
+                enemyTransforms.Add(enemies[i].transform);
         }
 
         for (int i = 0; i < numberOfCirclesToCheck; i++)
@@ -116,9 +153,14 @@ public class IAHostage : MonoBehaviour
                 Vector3 pointPosition = new Vector3(circleDistance * Mathf.Sin(Mathf.Deg2Rad * degreePerPoint * y), 0,
                     circleDistance * Mathf.Cos(Mathf.Deg2Rad * degreePerPoint * y));
 
-                CheckPointSafe(pointPosition, enemyTransforms);
+                if (CheckPointSafe(pointPosition, enemyTransforms))
+                {
+                    return saveSpot;
+                }
             }
         }
+        
+        Debug.Log("No save spot found");
         
         return saveSpot;
     }
@@ -150,6 +192,7 @@ public class IAHostage : MonoBehaviour
             return false;
         }
 
+        Debug.Log("PAS NORMAL");
         return true;
     }
 
