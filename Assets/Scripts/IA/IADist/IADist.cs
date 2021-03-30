@@ -21,6 +21,7 @@ public class IADist : IAParent
     
     public override void SwitchToState()
     {
+        Debug.Log("je change d'état");
         currentState = new DistStateP2(this);
     }
 
@@ -31,8 +32,8 @@ public class IADist : IAParent
 
     private void OnDrawGizmos()
     {
-        Debug.DrawRay(transform.position,15*transform.forward,Color.green);
-        Debug.DrawRay(transform.position,15*transform.forward-transform.right*4,Color.magenta);
-        Debug.DrawRay(transform.position,15*transform.forward+transform.right*4,Color.red);
+        Debug.DrawRay(transform.position,30*transform.forward,Color.green);
+        Debug.DrawRay(transform.position,30*transform.forward-transform.right*4,Color.magenta);
+        Debug.DrawRay(transform.position,30*transform.forward+transform.right*4,Color.red);
     }
 }

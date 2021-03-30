@@ -533,6 +533,11 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 362985544}
+    - target: {fileID: 8251582523102670546, guid: c5544eadf0666f344aec666a083ce193,
+        type: 3}
+      propertyPath: miradorTransform
+      value: 
+      objectReference: {fileID: 1688546590}
     - target: {fileID: 8251582523102670550, guid: c5544eadf0666f344aec666a083ce193,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1460,6 +1465,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6757040570431827226, guid: 8516a34e20431ed47952c7b40bd3362e,
+        type: 3}
+      propertyPath: placeToSpawnItems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6757040570431827226, guid: 8516a34e20431ed47952c7b40bd3362e,
         type: 3}
       propertyPath: placeToSpawnItems.Array.data[0]
