@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+
+
     }
 
     #endregion

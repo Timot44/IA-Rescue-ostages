@@ -11,6 +11,8 @@ public class DistStateP2 : DistState
     public override void Move()
     {
         context.agent.SetDestination(context.miradorTransform.position);
+        context.transform.Rotate(0,Time.deltaTime*20,0);
+        
         timerToShootAgain -= Time.deltaTime;
         Vector3 IAPos = context.gameObject.transform.position;
         Vector3 IAForward = context.gameObject.transform.forward * maxDistance;
@@ -27,7 +29,7 @@ public class DistStateP2 : DistState
         {
             if (Physics.Raycast(ray, out hit, maxDistance))
             {
-                if (hit.collider.tag == "Player" && timerToShootAgain <= 0)
+                if (hit.collider.CompareTag("Player") && timerToShootAgain <= 0)
                 {
                     Shoot();
                 }
