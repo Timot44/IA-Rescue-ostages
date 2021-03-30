@@ -5,12 +5,9 @@ using UnityEngine;
 public abstract class Player : MonoBehaviour
 {
     
-    protected bool canDisarm;
+    
 
 
 
-    public virtual void DisarmMine()
-    {
-        
-    }
+   
 }
