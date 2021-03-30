@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class IAHostage : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class IAHostage : MonoBehaviour
     public int maxHealth = 100;
     public float correctDistanceFromPlayer = 2f;
     public NavMeshAgent agent;
+    public Slider healthBarSlider;
 
     [Header("Hide parameters")] 
     public float distanceToCheck = 10f;
@@ -64,6 +66,8 @@ public class IAHostage : MonoBehaviour
 
     public void Update()
     {
+        healthBarSlider.value = health;
+        
         if (phaseTwo)
         {
             if (!fleeingEnemies)
@@ -77,6 +81,8 @@ public class IAHostage : MonoBehaviour
                 }
             else
             {
+                Debug.Log("GoToSaveSpot");
+                
                 if (saveSpotPos == null)
                 {
                     saveSpotPos = SearchSaveSpot();
@@ -102,6 +108,11 @@ public class IAHostage : MonoBehaviour
                 {
                     saveSpotTimer -= Time.deltaTime;
                 }
+
+                if (saveSpotPos != Vector3.zero)
+                {
+                    agent.destination = saveSpotPos;
+                }
             }
         }
     }
@@ -110,8 +121,10 @@ public class IAHostage : MonoBehaviour
     {
         foreach (var ias in enemies)
         {
+            Debug.Log("Test iA : " + ias.gameObject.name);
             if (ias.isAttack)
             {
+                Debug.Log("This iA is Hostile");
                 fleeingEnemies = true;
                 return;
             }
