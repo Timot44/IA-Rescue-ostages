@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <e p="C:\Users\PC\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\PC\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_IA-Rescue-ostages.-2012495293.00" t="ExcludeRecursive" />
     <e p="D:\projetUnity\IA-Rescue-ostages" t="IncludeRecursive">
@@ -9,6 +10,11 @@
     <e p="C:\Users\Milomane\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Milomane\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_IA-Rescue-ostages.-1294525456.00" t="ExcludeRecursive" />
     <e p="C:\Users\Milomane\Documents\Jeux Unity\IA-Rescue-ostages" t="IncludeRecursive">
+>>>>>>> Stashed changes
+=======
+    <e p="C:\Users\ronde\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ronde\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_IA-Rescue-ostages.-801990668.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ronde\Desktop\Unity E-artsup\IA 2nde Semestre\IA-Rescue-ostages" t="IncludeRecursive">
 >>>>>>> Stashed changes
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -118,6 +124,7 @@
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerShoot.cs" t="Include" />
           </e>
+          <e p="UI_MenuButtons.cs" t="Include" />
           <e p="Weapons.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

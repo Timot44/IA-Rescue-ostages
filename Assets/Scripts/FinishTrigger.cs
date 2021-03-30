@@ -10,6 +10,8 @@ public class FinishTrigger : MonoBehaviour
         if (other.CompareTag("Player") && GameManager.Instance.isPhaseTwo)
         {
            GameManager.Instance.Win();
+           Cursor.visible = true;
+           Cursor.lockState = CursorLockMode.None;
         }
     }
 }
