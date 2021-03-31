@@ -5,7 +5,7 @@ public class DistStateP2 : DistState
     public DistStateP2(IADist ctx)
     {
         context = ctx;
-        maxDistance = 30;
+        maxDistanceMultiplier = 2;
     }
 
     public override void Move()
@@ -13,28 +13,35 @@ public class DistStateP2 : DistState
         context.agent.SetDestination(context.miradorTransform.position);
         context.transform.Rotate(0,Time.deltaTime*20,0);
         
-        timerToShootAgain -= Time.deltaTime;
-      //  Debug.Log(timerToShootAgain);
-        Vector3 IAPos = context.gameObject.transform.position;
-        Vector3 IAForward = context.gameObject.transform.forward * maxDistance;
-        Vector3 IARight = context.gameObject.transform.right * 5;
-        Ray ray1 = new Ray(IAPos, IAForward);
-        Ray ray2 = new Ray(IAPos, IAForward - IARight);
-        Ray ray3 = new Ray(IAPos, IAForward + IARight);
-        Ray[] rays = new[]
+        if (DetectPlayer(context) && timerToShootAgain <= 0)
         {
-            ray1, ray2, ray3
-        };
-        RaycastHit hit;
-        foreach (var ray in rays)
+            Shoot();
+        }
+    }
+    
+    public bool DetectPlayer(IADist ctx)
+    {
+        float anglePerRay = ctx.angle / ctx.rayCount;
+        
+        for (int i = 0; i < ctx.rayCount; i++)
         {
-            if (Physics.Raycast(ray, out hit, maxDistance))
+            Vector3 rayForward = new Vector3(ctx.detectionRange * maxDistanceMultiplier * Mathf.Sin((Mathf.Deg2Rad * anglePerRay * i) - (ctx.angle/2) * Mathf.Deg2Rad + ctx.transform.localEulerAngles.y * Mathf.Deg2Rad), 
+                0, 
+                ctx.detectionRange * maxDistanceMultiplier * Mathf.Cos((Mathf.Deg2Rad * anglePerRay * i) - (ctx.angle/2) * Mathf.Deg2Rad + ctx.transform.localEulerAngles.y * Mathf.Deg2Rad));
+            
+            Debug.Log("is this normal");
+            Debug.DrawRay(ctx.transform.position, rayForward);
+            
+            Ray ray = new Ray(ctx.transform.position, rayForward);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, ctx.detectionRange))
             {
-                if (hit.collider.CompareTag("Player") && timerToShootAgain <= 0)
+                if (hit.collider.tag == "Player")
                 {
-                    Shoot();
+                    return true;
                 }
             }
         }
+        return false;
     }
 }

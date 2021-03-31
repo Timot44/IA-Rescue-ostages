@@ -7,7 +7,9 @@ public class IADist : IAParent
 
     public NavMeshAgent agent;
     public Transform miradorTransform;
-   void Start()
+    
+    
+    void Start()
     {
         currentState = new DistStateP1(this);
         health = maxHealth;
@@ -28,12 +30,5 @@ public class IADist : IAParent
     public override void HelpPatroller(Transform playerPos)
     {
         agent.SetDestination(playerPos.position);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Debug.DrawRay(transform.position,30*transform.forward,Color.green);
-        Debug.DrawRay(transform.position,30*transform.forward-transform.right*5,Color.magenta);
-        Debug.DrawRay(transform.position,30*transform.forward+transform.right*5,Color.red);
     }
 }

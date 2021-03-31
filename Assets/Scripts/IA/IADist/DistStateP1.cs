@@ -5,11 +5,12 @@ public class DistStateP1 : DistState
     public DistStateP1(IADist ctx)
     {
         context = ctx;
-        maxDistance = 15;
+        maxDistanceMultiplier = 1;
     }
 
     public override void Move()
     {
+        Debug.Log("In");
         context.agent.SetDestination(context.patrolWaypoint[index].position);
         if (Vector3.Distance(context.gameObject.transform.position, context.patrolWaypoint[index].position) <=
             context.distanceToChangeWaypoint)
@@ -22,33 +23,37 @@ public class DistStateP1 : DistState
             index = 0;
         }
 
-        Vector3 IAPos = context.gameObject.transform.position;
-        Vector3 IAForward = context.gameObject.transform.forward * maxDistance;
-        Vector3 IARight = context.gameObject.transform.right * 4;
-        Ray ray1 = new Ray(IAPos, IAForward);
-        Ray ray2 = new Ray(IAPos, IAForward - IARight);
-        Ray ray3 = new Ray(IAPos, IAForward + IARight);
-        Ray[] rays = new[]
+        if (DetectPlayer(context) && timerToShootAgain <= 0)
         {
-            ray1, ray2, ray3
-        };
-        timerToShootAgain -= Time.deltaTime;
-        if (timerToShootAgain <= 2)
-        {
-            context.agent.isStopped = false;
+            Shoot();
         }
-
-        RaycastHit hit;
-        foreach (var ray in rays)
+    }
+    
+    public bool DetectPlayer(IADist ctx)
+    {
+        Debug.Log("In here");
+        
+        float anglePerRay = ctx.angle / ctx.rayCount;
+        
+        for (int i = 0; i < ctx.rayCount; i++)
         {
-            if (Physics.Raycast(ray, out hit, maxDistance))
+            Vector3 rayForward = new Vector3(ctx.detectionRange * maxDistanceMultiplier * Mathf.Sin((Mathf.Deg2Rad * anglePerRay * i) - (ctx.angle/2) * Mathf.Deg2Rad + ctx.transform.localEulerAngles.y * Mathf.Deg2Rad), 
+                0, 
+                ctx.detectionRange * maxDistanceMultiplier * Mathf.Cos((Mathf.Deg2Rad * anglePerRay * i) - (ctx.angle/2) * Mathf.Deg2Rad + ctx.transform.localEulerAngles.y * Mathf.Deg2Rad));
+            
+            Debug.Log("is this normal");
+            Debug.DrawRay(ctx.transform.position, rayForward);
+            
+            Ray ray = new Ray(ctx.transform.position, rayForward);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, ctx.detectionRange))
             {
-                if (hit.collider.tag == "Player" && timerToShootAgain <= 0)
+                if (hit.collider.tag == "Player")
                 {
-                    context.agent.isStopped = true;
-                    Shoot();
+                    return true;
                 }
             }
         }
+        return false;
     }
 }

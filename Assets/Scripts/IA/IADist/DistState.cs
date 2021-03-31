@@ -2,7 +2,7 @@
 
 public abstract class DistState
 {
-    public float maxDistance;
+    public float maxDistanceMultiplier;
     
     protected int index;
     
@@ -18,7 +18,7 @@ public abstract class DistState
     {
         timerToShootAgain = 2.5f;
         Vector3 IAPos = context.gameObject.transform.position;
-        Vector3 IAForward = context.gameObject.transform.forward * maxDistance;
+        Vector3 IAForward = context.gameObject.transform.forward * maxDistanceMultiplier;
         Vector3 IARight = context.gameObject.transform.right * 4;
         Ray ray1 = new Ray(IAPos, IAForward);
         Ray ray2 = new Ray(IAPos, IAForward - IARight);
@@ -30,7 +30,7 @@ public abstract class DistState
         RaycastHit hit;
         foreach (var ray in rays)
         {
-            if (Physics.Raycast(ray, out hit, maxDistance))
+            if (Physics.Raycast(ray, out hit, maxDistanceMultiplier))
             {
                 if (hit.collider.CompareTag("Player"))
                 {

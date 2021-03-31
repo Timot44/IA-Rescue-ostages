@@ -203,7 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2de40431abdde45a676bf55e5138d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 0
   baseDamage: 0
   maxHealth: 100
   slider: {fileID: 5139216320340112957}
@@ -214,6 +213,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   isAttack: 0
+  detectionRange: 15
+  angle: 90
+  rayCount: 25
   agent: {fileID: 8251582523102670545}
   miradorTransform: {fileID: 0}
 --- !u!195 &8251582523102670545
