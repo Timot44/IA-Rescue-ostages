@@ -24,9 +24,12 @@
       <Path>.idea</Path>
       <Path>Library</Path>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <Path>Temp</Path>
 =======
       <Path>Logs</Path>
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       <Path>obj</Path>
     </explicitExcludes>
