@@ -7,7 +7,7 @@ public class FinishTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && GameManager.Instance.isPhaseTwo)
+        if (other.gameObject.GetComponent<IAHostage>() && GameManager.Instance.isPhaseTwo)
         {
            GameManager.Instance.Win();
            Cursor.visible = true;

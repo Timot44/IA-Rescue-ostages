@@ -43,7 +43,7 @@ public class IAPatroller : IAParent
             
             if (Vector3.Distance(enemy.transform.position, transform.position) < callEnemyMaxDistance)
             {
-                Debug.Log(enemy.gameObject.name);
+                
                 enemy.GetComponent<IAParent>().HelpPatroller(player);
                 helpCounter--;
             }
