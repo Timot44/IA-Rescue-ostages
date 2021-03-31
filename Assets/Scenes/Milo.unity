@@ -1607,6 +1607,16 @@ PrefabInstance:
       propertyPath: patrolWaypoint.Array.data[3]
       value: 
       objectReference: {fileID: 1551347577}
+    - target: {fileID: 1070517216672103154, guid: c5af87e26a9f215499dd4ca41c726248,
+        type: 3}
+      propertyPath: angle
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070517216672103154, guid: c5af87e26a9f215499dd4ca41c726248,
+        type: 3}
+      propertyPath: rayCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1070517216672103155, guid: c5af87e26a9f215499dd4ca41c726248,
         type: 3}
       propertyPath: m_LocalPosition.x

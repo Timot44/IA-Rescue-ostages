@@ -336,7 +336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e93348d9918624fa3c51e17f081c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 5
   baseDamage: 1
   maxHealth: 100
   slider: {fileID: 4166220513458096805}
@@ -348,6 +347,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   isAttack: 0
+  detectionRange: 12
+  angle: 120
+  rayCount: 6
   minePlaced: 0
   callEnemyCount: 5
   callEnemyMaxDistance: 15

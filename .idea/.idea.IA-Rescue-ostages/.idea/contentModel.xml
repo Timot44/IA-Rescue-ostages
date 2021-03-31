@@ -78,7 +78,6 @@
           <e p="FinishTrigger.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="IA" t="Include">
-            <e p="HostageState.cs" t="Include" />
             <e p="IA Cac" t="Include">
               <e p="CacState.cs" t="Include" />
               <e p="IACac.cs" t="Include" />

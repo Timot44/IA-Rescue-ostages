@@ -21,7 +21,8 @@ public class IACac : IAParent
 
     
     public GameObject obj_spoted;
-    // Start is called before the first frame update
+    
+    
     public override void SwitchToState()
     {
         currentState = new CacStateP2(this);
@@ -37,7 +38,7 @@ public class IACac : IAParent
         SetBarMax(maxHealth);
     }
 
-    // Update is called once per frame
+     
     void Update()
     {
 
@@ -55,17 +56,16 @@ public class IACac : IAParent
 
     public bool IsPlayerDetected()
     {
+        float anglePerRay = angle / rayCount;
         
-        Vector3 iAPos = transform.position;
-        Vector3 iAForward = transform.forward * detectionRange;
-        Vector3 iARight = transform.right * 3f;
-        Ray ray1 = new Ray(iAPos, iAForward);
-        Ray ray2 = new Ray(iAPos,iAForward - iARight);
-        Ray ray3 = new Ray(iAPos,iAForward + iARight);
-        Ray[] rays = new[] {ray1, ray2, ray3};
-        RaycastHit hit;
-        foreach (var ray in rays)
+        for (int i = 0; i < rayCount; i++)
         {
+            Vector3 rayForward = new Vector3(detectionRange * Mathf.Sin((Mathf.Deg2Rad * anglePerRay * i) - (angle/2) * Mathf.Deg2Rad + transform.localEulerAngles.y * Mathf.Deg2Rad), 
+                                     0, 
+                                     detectionRange * Mathf.Cos((Mathf.Deg2Rad * anglePerRay * i) - (angle/2) * Mathf.Deg2Rad + transform.localEulerAngles.y * Mathf.Deg2Rad));
+            
+            Ray ray = new Ray(transform.position, rayForward);
+            RaycastHit hit;
             if (Physics.Raycast(ray, out hit, detectionRange))
             {
                 if (hit.collider.tag == "Player")
@@ -79,8 +79,6 @@ public class IACac : IAParent
         }
         isPlayerDetected = false;
         return false;
-        
-        
     }
     public override void HelpPatroller(Transform playerPos)
     {
@@ -95,9 +93,20 @@ public class IACac : IAParent
     
     private void OnDrawGizmosSelected()
     {
-        Debug.DrawRay(transform.position,detectionRange * transform.forward, Color.red);
-        Debug.DrawRay(transform.position,detectionRange * transform.forward - transform.right * 3, Color.blue);
-        Debug.DrawRay(transform.position,detectionRange * transform.forward + transform.right * 3, Color.green);
+        float anglePerRay = (angle/2) / (rayCount/2);
+        
+        for (int i = 0; i < rayCount; i++)
+        {
+            Vector3 rayForward = transform.position + new Vector3(
+                                     detectionRange *
+                                     Mathf.Sin((Mathf.Deg2Rad * anglePerRay * i) - (angle / 2) * Mathf.Deg2Rad +
+                                               transform.localEulerAngles.y * Mathf.Deg2Rad), 0,
+                                     detectionRange *
+                                     Mathf.Cos((Mathf.Deg2Rad * anglePerRay * i) - (angle / 2) * Mathf.Deg2Rad +
+                                               transform.localEulerAngles.y * Mathf.Deg2Rad));
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, rayForward - transform.position);
+        }
     }
     
 }

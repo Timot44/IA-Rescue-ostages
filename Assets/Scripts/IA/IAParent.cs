@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public abstract class IAParent : MonoBehaviour
 {
     [Header("Main Parameters")]
-    public float detectionRange;
-    
     public int baseDamage;
     
     [Header("Life parameters")]
@@ -21,7 +19,13 @@ public abstract class IAParent : MonoBehaviour
     public float distanceToChangeWaypoint;
     public Transform[] patrolWaypoint;
     public bool isAttack;
-    public virtual void SwitchToState()
+    
+    [Header("Detection Parameters")]
+    public float detectionRange = 10;
+    public float angle = 90;
+    public int rayCount = 5;
+    
+        public virtual void SwitchToState()
     {
     }
 
