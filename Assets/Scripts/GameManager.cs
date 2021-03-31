@@ -56,8 +56,11 @@ public class GameManager : MonoBehaviour
     {
         if (isPhaseTwo)
         {
+            player.GetComponent<CharacterController>().enabled = false;
             player.transform.position = playerRespawnPoint.position;
-            player.GetComponent<PlayerLife>().playerLife = player.GetComponent<PlayerLife>().playerMaxLife;
+            player.GetComponent<PlayerLife>().Start();
+            player.GetComponent<CharacterController>().enabled = true;
+            
             hostage.transform.position = hostageRespawnPoint.position;
             hostage.GetComponent<IAHostage>().health = hostage.GetComponent<IAHostage>().maxHealth;
         }
