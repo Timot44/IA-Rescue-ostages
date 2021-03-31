@@ -34,7 +34,7 @@ public class UI_MenuButtons : MonoBehaviour
 
    private void Update()
    {
-      if (Input.GetKeyDown(KeyCode.Escape))
+      if (Input.GetKeyDown(KeyCode.Escape) && pausePanel)
       {
          if (isGameIsPause)
          {

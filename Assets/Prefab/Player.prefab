@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f54660d20dc2f4cb170e4de5c295ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 300
+  mouseSensitivity: 250
   playerbody: {fileID: 1941184131251242930}
 --- !u!1 &1941184130868595131
 GameObject:
@@ -217,7 +217,7 @@ MonoBehaviour:
   weaponNameText: {fileID: 0}
   ammoText: {fileID: 0}
   canDisarm: 0
-  mine: {fileID: 0}
+  mineList: []
   disarmDistance: 2
 --- !u!114 &1941184131251242933
 MonoBehaviour:
