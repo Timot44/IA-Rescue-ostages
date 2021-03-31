@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ public class IAHostage : MonoBehaviour
     public float correctDistanceFromPlayer = 2f;
     public NavMeshAgent agent;
     public Slider healthBarSlider;
+    public bool testFlee;
 
     [Header("Hide parameters")] 
     public float distanceToCheck = 10f;
@@ -70,7 +72,7 @@ public class IAHostage : MonoBehaviour
         
         if (phaseTwo)
         {
-            if (!fleeingEnemies)
+            if (!fleeingEnemies && !testFlee)
                 if (Vector3.Distance(player.position, transform.position) > correctDistanceFromPlayer)
                 {
                     agent.destination = player.transform.position;
@@ -81,9 +83,8 @@ public class IAHostage : MonoBehaviour
                 }
             else
             {
-                Debug.Log("GoToSaveSpot");
                 
-                if (saveSpotPos == null)
+                if (saveSpotPos == null || saveSpotPos == Vector3.zero)
                 {
                     saveSpotPos = SearchSaveSpot();
                 }
@@ -121,10 +122,8 @@ public class IAHostage : MonoBehaviour
     {
         foreach (var ias in enemies)
         {
-            Debug.Log("Test iA : " + ias.gameObject.name);
             if (ias.isAttack)
             {
-                Debug.Log("This iA is Hostile");
                 fleeingEnemies = true;
                 return;
             }
@@ -184,19 +183,32 @@ public class IAHostage : MonoBehaviour
         for(int i = 0; i < enemyTransforms.Count; i++)
         {
             if (Vector3.Distance(enemyTransforms[i].position, transform.position) < minDistanceFromEnemies)
+            {
+                Debug.Log("Fail at distance : " + pointPos + "  Distance : " + Vector3.Distance(enemyTransforms[i].position, transform.position) + "  Enemy : " + enemyTransforms[i].gameObject);
                 return false;
+            }
+                
         }
 
         RaycastHit hitSphere;
         if (!Physics.SphereCast(pointPos, .2f, Vector3.down, out hitSphere, .2f, obstaclesLayers))
         {
+            Debug.Log("GoInSphereCast : " + pointPos);
+            
             foreach (var enemy in enemyTransforms)
             {
                 RaycastHit hit;
                 if (Physics.Linecast(pointPos, enemy.position, obstaclesLayers))
+                {
+                    Debug.Log("Found it : " + pointPos);
                     return true;
+                }
                 else
+                {
+                    Debug.Log("Failed at enemyCast : " + pointPos);
                     return false;
+                }
+                    
             }
         }
         else
