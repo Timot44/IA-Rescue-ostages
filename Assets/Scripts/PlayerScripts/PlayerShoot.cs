@@ -20,8 +20,7 @@ public class PlayerShoot : Player
     public int ammo;
     public string weaponName;
     public TextMeshProUGUI weaponNameText;
-    public TextMeshProUGUI ammoText
-        ;
+    public TextMeshProUGUI ammoText;
     public bool canDisarm;
     public List<GameObject> mineList;
     public float disarmDistance;

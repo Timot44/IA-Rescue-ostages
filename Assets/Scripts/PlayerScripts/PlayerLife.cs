@@ -26,11 +26,8 @@ public class PlayerLife : Player
     void Update()
     {
         if (playerLife <= 0)
-        {
-            //TODO Faire une function pour la mort du joueur//
-            
+        { 
             gameManager.RespawnPlayer(gameObject, go_Hostage);
-            
         }
         
         
