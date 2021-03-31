@@ -83,6 +83,7 @@ public class IACac : IAParent
     public override void HelpPatroller(Transform playerPos)
     {
         agent.SetDestination(playerPos.position);
+        Debug.Log("RUSH PLAYER MY FRIEND");
     }
 
     public void ResetAttack()

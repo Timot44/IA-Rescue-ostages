@@ -30,5 +30,6 @@ public class IADist : IAParent
     public override void HelpPatroller(Transform playerPos)
     {
         agent.SetDestination(playerPos.position);
+        Debug.Log("RUSH PLAYER MY FRIEND");
     }
 }

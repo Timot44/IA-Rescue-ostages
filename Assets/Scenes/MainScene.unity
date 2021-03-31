@@ -20042,6 +20042,11 @@ PrefabInstance:
       propertyPath: patrolWaypoint.Array.data[4]
       value: 
       objectReference: {fileID: 901901501}
+    - target: {fileID: 4389568002526074808, guid: add3bdc970c1d5344893324d62e223ae,
+        type: 3}
+      propertyPath: callEnemyMaxDistance
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 4389568002526074815, guid: add3bdc970c1d5344893324d62e223ae,
         type: 3}
       propertyPath: m_Name
@@ -20157,6 +20162,11 @@ PrefabInstance:
       propertyPath: patrolWaypoint.Array.data[4]
       value: 
       objectReference: {fileID: 606681198}
+    - target: {fileID: 4389568002526074808, guid: add3bdc970c1d5344893324d62e223ae,
+        type: 3}
+      propertyPath: callEnemyMaxDistance
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 4389568002526074815, guid: add3bdc970c1d5344893324d62e223ae,
         type: 3}
       propertyPath: m_Name
@@ -28304,6 +28314,11 @@ PrefabInstance:
       propertyPath: patrolWaypoint.Array.data[4]
       value: 
       objectReference: {fileID: 457207101}
+    - target: {fileID: 4389568002526074808, guid: add3bdc970c1d5344893324d62e223ae,
+        type: 3}
+      propertyPath: callEnemyMaxDistance
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 4389568002526074815, guid: add3bdc970c1d5344893324d62e223ae,
         type: 3}
       propertyPath: m_Name
