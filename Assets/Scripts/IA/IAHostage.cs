@@ -169,7 +169,7 @@ public class IAHostage : MonoBehaviour
                 if (CheckPointSafe(pointPosition, enemyTransforms))
                 {
                     saveSpot = pointPosition;
-                    Debug.Log("Return safe spot : " + saveSpot);
+                    
                     return saveSpot;
                 }
             }
@@ -201,7 +201,6 @@ public class IAHostage : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Linecast(pointPos, enemy.position, obstaclesLayers))
                 {
-                    Debug.Log("Found safe point : " + pointPos);
                     return true;
                 }
                 else
