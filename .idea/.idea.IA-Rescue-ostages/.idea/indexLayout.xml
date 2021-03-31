@@ -26,6 +26,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <Path>Temp</Path>
 =======
       <Path>Logs</Path>
@@ -34,6 +35,8 @@
 >>>>>>> Stashed changes
 =======
       <Path>Temp</Path>
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       <Path>obj</Path>
     </explicitExcludes>
