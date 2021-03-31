@@ -23,7 +23,11 @@
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Library</Path>
+<<<<<<< Updated upstream
       <Path>Temp</Path>
+=======
+      <Path>Logs</Path>
+>>>>>>> Stashed changes
       <Path>obj</Path>
     </explicitExcludes>
   </component>
