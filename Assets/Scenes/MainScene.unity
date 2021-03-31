@@ -152,6 +152,18 @@ Transform:
   m_Father: {fileID: 1151917582}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &37919094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6757040570431827226, guid: 8516a34e20431ed47952c7b40bd3362e,
+    type: 3}
+  m_PrefabInstance: {fileID: 799390175}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2113026e133772469f67ba86724702b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &42228488
 GameObject:
   m_ObjectHideFlags: 0
@@ -9254,7 +9266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518867715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1224885211}
@@ -19361,6 +19373,16 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 198786866}
+    - target: {fileID: 1941184131251242933, guid: 4060b64b64d75024c9cad5ac73d27afa,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 37919094}
+    - target: {fileID: 1941184131251242933, guid: 4060b64b64d75024c9cad5ac73d27afa,
+        type: 3}
+      propertyPath: go_Hostage
+      value: 
+      objectReference: {fileID: 1858920917}
     - target: {fileID: 1941184131284252805, guid: 4060b64b64d75024c9cad5ac73d27afa,
         type: 3}
       propertyPath: far clip plane
@@ -35019,6 +35041,12 @@ Transform:
   m_Father: {fileID: 1913186828}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1858920917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8936423522801449679, guid: ca7246040d825e24d83f69c014949bda,
+    type: 3}
+  m_PrefabInstance: {fileID: 309259670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1868009540
 Mesh:
   m_ObjectHideFlags: 0

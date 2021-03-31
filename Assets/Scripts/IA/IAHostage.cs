@@ -57,6 +57,7 @@ public class IAHostage : MonoBehaviour
 
     public void Dead()
     {
+        GameManager.Instance.RespawnPlayer(player.gameObject, gameObject);
     }
 
     public void Start()
