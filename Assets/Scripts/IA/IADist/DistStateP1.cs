@@ -10,29 +10,42 @@ public class DistStateP1 : DistState
 
     public override void Move()
     {
-        context.agent.SetDestination(context.patrolWaypoint[index].position);
-        if (Vector3.Distance(context.gameObject.transform.position, context.patrolWaypoint[index].position) <=
-            context.distanceToChangeWaypoint)
-        {
-            index++;
-        }
 
-        if (index >= context.patrolWaypoint.Length)
+        if (context.isRushing)
         {
-            index = 0;
+            context.agent.SetDestination(context.rushPos);
+            if (Vector3.Distance(context.rushPos, context.transform.position) <= 2)
+            {
+                context.isRushing = false;
+            }
         }
-
-        timerToShootAgain -= Time.deltaTime;
-
-        if (DetectPlayer(context) && timerToShootAgain <= 0)
+        else
         {
-            Shoot();
+            context.agent.SetDestination(context.patrolWaypoint[index].position);
+            if (Vector3.Distance(context.gameObject.transform.position, context.patrolWaypoint[index].position) <=
+                context.distanceToChangeWaypoint)
+            {
+                index++;
+            }
+
+            if (index >= context.patrolWaypoint.Length)
+            {
+                index = 0;
+            }
+
+            timerToShootAgain -= Time.deltaTime;
+
+            if (DetectPlayer(context) && timerToShootAgain <= 0)
+            {
+                Shoot();
+            }
         }
+       
     }
 
     public bool DetectPlayer(IADist ctx)
     {
-        Debug.Log("In here");
+        
 
         float anglePerRay = ctx.angle / ctx.rayCount;
 

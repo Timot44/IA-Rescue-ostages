@@ -21,8 +21,9 @@ public class IACac : IAParent
 
     
     public GameObject obj_spoted;
-    
-    
+
+    public bool isRushing;
+    public Vector3 rushPos;
     public override void SwitchToState()
     {
         currentState = new CacStateP2(this);
@@ -82,8 +83,9 @@ public class IACac : IAParent
     }
     public override void HelpPatroller(Transform playerPos)
     {
-        agent.SetDestination(playerPos.position);
-        Debug.Log("RUSH PLAYER MY FRIEND");
+        isRushing = true;
+        rushPos = playerPos.position;
+        
     }
 
     public void ResetAttack()

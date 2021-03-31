@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Carabine
   m_EditorClassIdentifier: 
   name: carabine
-  fireRate: 2.5
-  currentAmmo: 5
-  damage: 20
+  fireRate: 1
+  currentAmmo: 10
+  damage: 25
   range: 150
   layers:
     serializedVersion: 2

@@ -8,7 +8,8 @@ public class IADist : IAParent
     public NavMeshAgent agent;
     public Transform miradorTransform;
     
-    
+    public bool isRushing;
+    public Vector3 rushPos;
     void Start()
     {
         currentState = new DistStateP1(this);
@@ -29,7 +30,8 @@ public class IADist : IAParent
 
     public override void HelpPatroller(Transform playerPos)
     {
-        agent.SetDestination(playerPos.position);
-        Debug.Log("RUSH PLAYER MY FRIEND");
+        isRushing = true;
+        rushPos = playerPos.position;
+        
     }
 }

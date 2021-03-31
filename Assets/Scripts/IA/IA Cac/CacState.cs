@@ -11,19 +11,31 @@ public abstract class CacState
       ctx.isAttack = false;
       if (!ctx.isPlayerDetected)
       {
-         
-         ctx.agent.SetDestination(ctx.patrolWaypoint[_index].position);
-         
-         if (Vector3.Distance(ctx.gameObject.transform.position, ctx.patrolWaypoint[_index].position) <=
-             ctx.distanceToChangeWaypoint)
+         if (ctx.isRushing)
          {
-            _index++;
+            ctx.agent.SetDestination(ctx.rushPos);
+            if (Vector3.Distance(ctx.rushPos, ctx.transform.position) <= 2)
+            {
+               ctx.isRushing = false;
+            }
          }
+         else
+         {
+            ctx.agent.SetDestination(ctx.patrolWaypoint[_index].position);
+            if (Vector3.Distance(ctx.gameObject.transform.position, ctx.patrolWaypoint[_index].position) <=
+                ctx.distanceToChangeWaypoint)
+            {
+               _index++;
+            }
 
-         if (_index >= ctx.patrolWaypoint.Length)
-         {
-            _index = 0;
+            if (_index >= ctx.patrolWaypoint.Length)
+            {
+               _index = 0;
+            }
          }
+         
+         
+        
       }
     
    }

@@ -10,7 +10,7 @@ public abstract class IAParent : MonoBehaviour
     public int baseDamage;
     
     [Header("Life parameters")]
-    protected int health;
+    public int health;
     public int maxHealth;
     public Slider slider;
     

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SimpleGun
   m_EditorClassIdentifier: 
   name: Pistol
-  fireRate: 1
-  currentAmmo: 16
-  damage: 10
+  fireRate: 0.5
+  currentAmmo: 20
+  damage: 15
   range: 100
   layers:
     serializedVersion: 2

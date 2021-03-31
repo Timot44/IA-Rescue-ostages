@@ -37,11 +37,13 @@ public class IAPatroller : IAParent
     {
         GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         int helpCounter = callEnemyCount;
-
+       
         foreach (var enemy in allEnemies)
         {
+            
             if (Vector3.Distance(enemy.transform.position, transform.position) < callEnemyMaxDistance)
             {
+                Debug.Log(enemy.gameObject.name);
                 enemy.GetComponent<IAParent>().HelpPatroller(player);
                 helpCounter--;
             }
@@ -55,12 +57,14 @@ public class IAPatroller : IAParent
     
     void Start()
     {
+        health = maxHealth;
+        SetBarMax(maxHealth);
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         currentState = new PatrollerStateP1();
         InvokeRepeating("AttemptToPlaceMine", 0, placeMineTime);
-        health = maxHealth;
-        SetBarMax(maxHealth);
+        
+       
     }
     
     void Update()
