@@ -216,6 +216,9 @@ MonoBehaviour:
   weaponName: 
   weaponNameText: {fileID: 0}
   ammoText: {fileID: 0}
+  canDisarm: 0
+  mine: {fileID: 0}
+  disarmDistance: 2
 --- !u!114 &1941184131251242933
 MonoBehaviour:
   m_ObjectHideFlags: 0

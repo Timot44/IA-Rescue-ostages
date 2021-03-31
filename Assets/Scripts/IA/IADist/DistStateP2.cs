@@ -14,9 +14,10 @@ public class DistStateP2 : DistState
         context.transform.Rotate(0,Time.deltaTime*20,0);
         
         timerToShootAgain -= Time.deltaTime;
+        Debug.Log(timerToShootAgain);
         Vector3 IAPos = context.gameObject.transform.position;
         Vector3 IAForward = context.gameObject.transform.forward * maxDistance;
-        Vector3 IARight = context.gameObject.transform.right * 4;
+        Vector3 IARight = context.gameObject.transform.right * 5;
         Ray ray1 = new Ray(IAPos, IAForward);
         Ray ray2 = new Ray(IAPos, IAForward - IARight);
         Ray ray3 = new Ray(IAPos, IAForward + IARight);

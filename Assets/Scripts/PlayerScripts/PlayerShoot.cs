@@ -20,8 +20,11 @@ public class PlayerShoot : Player
     public int ammo;
     public string weaponName;
     public TextMeshProUGUI weaponNameText;
-    public TextMeshProUGUI ammoText;
-    
+    public TextMeshProUGUI ammoText
+        ;
+    public bool canDisarm;
+    public GameObject mine;
+    public float disarmDistance;
     void Update()
     {
         if (currentWeapoons)
@@ -35,6 +38,11 @@ public class PlayerShoot : Player
         if (Input.GetMouseButtonDown(0) && fireRate <= 0f && currentWeapoons && ammo > 0)
         {
             Shoot();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && mine && Vector3.Distance(gameObject.transform.position, mine.transform.position) < disarmDistance)
+        {
+            DisarmMine();
         }
     }
 
@@ -77,6 +85,12 @@ public class PlayerShoot : Player
             raycastHit.collider.gameObject.GetComponent<IAParent>().TakeDamage(weaponDamage);
         }
         fireRate = currentWeapoons.fireRate;
+    }
+
+    private void DisarmMine()
+    {
+        mine.GetComponent<Mine>().aIPlacer.minePlaced = false;
+        Destroy(mine);
     }
     
 
