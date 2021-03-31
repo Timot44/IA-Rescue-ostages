@@ -104,6 +104,8 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         panelWin.SetActive(true);
+        Time.timeScale = 0f;
+        UI_MenuButtons._instance.isGameIsPause = true;
     }
     
     

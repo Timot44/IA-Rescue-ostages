@@ -29969,6 +29969,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1606345665 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2196782111949484165, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1879967343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb180953347a234c959b79598ea5143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1621066472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38587,6 +38599,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2013809643, guid: d25c4ca82562cc64fb1481bfc7675d6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1606345665}
+    - target: {fileID: 2013809643, guid: d25c4ca82562cc64fb1481bfc7675d6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013809643, guid: d25c4ca82562cc64fb1481bfc7675d6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 610458768958434011, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1606345665}
+    - target: {fileID: 610458768958434011, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
     - target: {fileID: 2136163624043461682, guid: d25c4ca82562cc64fb1481bfc7675d6b,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -38706,6 +38740,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614638914104768428, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1606345665}
+    - target: {fileID: 7614638914104768428, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d25c4ca82562cc64fb1481bfc7675d6b, type: 3}
