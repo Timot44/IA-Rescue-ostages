@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81c71c900ced0e249b9b60d0fbe5b0d7, type: 3}
-  m_Name: Carabine
+  m_Name: Bazooka
   m_EditorClassIdentifier: 
-  name: Rifle
-  fireRate: 1
-  currentAmmo: 10
-  damage: 25
-  range: 150
+  name: Bazooka
+  fireRate: 2.5
+  currentAmmo: 5
+  damage: 50
+  range: 100
   layers:
     serializedVersion: 2
     m_Bits: 512
