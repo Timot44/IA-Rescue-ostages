@@ -121,6 +121,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   isAttack: 0
   detectionRange: 9.35
   angle: 120

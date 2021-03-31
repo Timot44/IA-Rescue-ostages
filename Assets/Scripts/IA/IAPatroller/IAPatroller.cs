@@ -59,6 +59,8 @@ public class IAPatroller : IAParent
         player = GameObject.FindGameObjectWithTag("Player").transform;
         currentState = new PatrollerStateP1();
         InvokeRepeating("AttemptToPlaceMine", 0, placeMineTime);
+        health = maxHealth;
+        SetBarMax(maxHealth);
     }
     
     void Update()
