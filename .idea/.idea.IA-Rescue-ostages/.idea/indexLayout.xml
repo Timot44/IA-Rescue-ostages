@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ContentModelUserStore">
     <attachedFolders />
-<<<<<<< HEAD
-    <explicitIncludes />
-=======
     <explicitIncludes>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
@@ -22,16 +19,12 @@
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
     </explicitIncludes>
->>>>>>> d8b0919c9b0bfc5d1634246ef5c70444a6e63f97
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Library</Path>
-<<<<<<< HEAD
       <Path>Logs</Path>
-=======
       <Path>Temp</Path>
->>>>>>> d8b0919c9b0bfc5d1634246ef5c70444a6e63f97
       <Path>obj</Path>
     </explicitExcludes>
   </component>

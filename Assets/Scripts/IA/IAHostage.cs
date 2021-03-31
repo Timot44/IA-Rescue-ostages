@@ -112,6 +112,7 @@ public class IAHostage : MonoBehaviour
 
                 if (saveSpotPos != Vector3.zero)
                 {
+                    Debug.Log("GotoSavespot : " + saveSpotPos);
                     agent.destination = saveSpotPos;
                 }
             }
@@ -163,10 +164,12 @@ public class IAHostage : MonoBehaviour
             for (int y = 0; y < trueNumberOfPoint; y++)
             {
                 Vector3 pointPosition = new Vector3(circleDistance * Mathf.Sin(Mathf.Deg2Rad * degreePerPoint * y), 0,
-                    circleDistance * Mathf.Cos(Mathf.Deg2Rad * degreePerPoint * y));
+                    circleDistance * Mathf.Cos(Mathf.Deg2Rad * degreePerPoint * y)) + transform.position;
 
                 if (CheckPointSafe(pointPosition, enemyTransforms))
                 {
+                    saveSpot = pointPosition;
+                    Debug.Log("Return safe spot : " + saveSpot);
                     return saveSpot;
                 }
             }
@@ -182,9 +185,8 @@ public class IAHostage : MonoBehaviour
         // Check is
         for(int i = 0; i < enemyTransforms.Count; i++)
         {
-            if (Vector3.Distance(enemyTransforms[i].position, transform.position) < minDistanceFromEnemies)
+            if (Vector3.Distance(enemyTransforms[i].position, pointPos) < minDistanceFromEnemies)
             {
-                Debug.Log("Fail at distance : " + pointPos + "  Distance : " + Vector3.Distance(enemyTransforms[i].position, transform.position) + "  Enemy : " + enemyTransforms[i].gameObject);
                 return false;
             }
                 
@@ -193,19 +195,17 @@ public class IAHostage : MonoBehaviour
         RaycastHit hitSphere;
         if (!Physics.SphereCast(pointPos, .2f, Vector3.down, out hitSphere, .2f, obstaclesLayers))
         {
-            Debug.Log("GoInSphereCast : " + pointPos);
             
             foreach (var enemy in enemyTransforms)
             {
                 RaycastHit hit;
                 if (Physics.Linecast(pointPos, enemy.position, obstaclesLayers))
                 {
-                    Debug.Log("Found it : " + pointPos);
+                    Debug.Log("Found safe point : " + pointPos);
                     return true;
                 }
                 else
                 {
-                    Debug.Log("Failed at enemyCast : " + pointPos);
                     return false;
                 }
                     
@@ -213,7 +213,6 @@ public class IAHostage : MonoBehaviour
         }
         else
         {
-            Debug.Log("This point is in wall : " + pointPos);
             return false;
         }
 
