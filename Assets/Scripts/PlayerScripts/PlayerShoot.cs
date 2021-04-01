@@ -24,6 +24,7 @@ public class PlayerShoot : Player
     public bool canDisarm;
     public List<GameObject> mineList;
     public float disarmDistance;
+    public ParticleSystem shoot_vfx;
     void Update()
     {
         if (currentWeapoons)
@@ -83,7 +84,7 @@ public class PlayerShoot : Player
         ammo--;
         Debug.DrawRay(_pos_cam, Camera.main.transform.forward * 100, Color.magenta, 3f);
         UpdateTextAmmo();
-        
+        shoot_vfx.Play();
         
          
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit, currentWeapoons.range,currentWeapoons.layers))
