@@ -216,6 +216,7 @@ MonoBehaviour:
   weaponName: 
   weaponNameText: {fileID: 0}
   ammoText: {fileID: 0}
+  countdownToShootAgain: {fileID: 0}
   shoot_vfx: {fileID: 0}
   impact_vfx: {fileID: 2066726187361638532, guid: fed53f8542eaa6f468a250ee78e6b011,
     type: 3}
@@ -292,7 +293,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 3
+  far clip plane: 1
   field of view: 90
   orthographic: 0
   orthographic size: 5
