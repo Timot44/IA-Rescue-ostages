@@ -418,7 +418,6 @@ MonoBehaviour:
   correctDistanceFromPlayer: 2
   agent: {fileID: 8936423522801449681}
   healthBarSlider: {fileID: 5581709503884473490}
-  testFlee: 0
   distanceToCheck: 14.49
   minDistanceFromEnemies: 3
   numberOfCirclesToCheck: 3
@@ -612,12 +611,12 @@ PrefabInstance:
     - target: {fileID: 377039771032797559, guid: 2ae8b9dfc0a4bd547a995258c76aee8e,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 377039771032797559, guid: 2ae8b9dfc0a4bd547a995258c76aee8e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 377039771032797559, guid: 2ae8b9dfc0a4bd547a995258c76aee8e,
         type: 3}

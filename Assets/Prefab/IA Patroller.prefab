@@ -337,9 +337,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 1
+  health: 0
   maxHealth: 100
   slider: {fileID: 4166220513458096805}
-  baseSpeed: 1
   distanceToChangeWaypoint: 1.5
   patrolWaypoint:
   - {fileID: 0}
@@ -349,9 +349,8 @@ MonoBehaviour:
   isAttack: 0
   detectionRange: 12
   angle: 120
-  rayCount: 6
+  rayCount: 10
   minePlaced: 0
-  callEnemyCount: 5
   callEnemyMaxDistance: 15
   fleeing: 0
   timeToStopFleeing: 20

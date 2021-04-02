@@ -28,12 +28,14 @@ public abstract class IAParent : MonoBehaviour
     {
     }
 
+        // Initialize void for help in child
     public virtual void HelpPatroller(Transform playerTransform)
     {
     }
     
     public virtual void TakeDamage(int damage)
     {
+        // Part to handle damage and death
         health -= damage;
         slider.value = health;
         if (health <= 0)
@@ -44,6 +46,7 @@ public abstract class IAParent : MonoBehaviour
 
     public void Dead()
     {
+        // Destroy the IA
         Destroy(gameObject);
     }
 
@@ -51,6 +54,7 @@ public abstract class IAParent : MonoBehaviour
 
     public void SetBarMax(int amount)
     {
+        // Set slider to show life
         slider.maxValue = amount;
         slider.value = amount;
     }
