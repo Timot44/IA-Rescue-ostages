@@ -16,7 +16,7 @@ MonoBehaviour:
   fireRate: 1
   currentAmmo: 10
   damage: 25
-  range: 150
+  range: 30
   layers:
     serializedVersion: 2
     m_Bits: 1537
