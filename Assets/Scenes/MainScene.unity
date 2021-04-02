@@ -38321,11 +38321,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 668319289297505288, guid: d25c4ca82562cc64fb1481bfc7675d6b,
-        type: 3}
-      propertyPath: m_text
-      value: You loose
-      objectReference: {fileID: 0}
     - target: {fileID: 2136163624043461682, guid: d25c4ca82562cc64fb1481bfc7675d6b,
         type: 3}
       propertyPath: m_AnchorMax.x
