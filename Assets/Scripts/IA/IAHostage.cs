@@ -94,8 +94,9 @@ public class IAHostage : MonoBehaviour
                     List<Transform> enemyTransforms = new List<Transform>();
                     for (int i = 0; i < enemies.Length; i++)
                     {
-                        if (enemies[i].isAttack && enemies[i])
-                            enemyTransforms.Add(enemies[i].transform);
+                        if (enemies[i] != null)
+                            if (enemies[i].isAttack && enemies[i])
+                                enemyTransforms.Add(enemies[i].transform);
                     }
 
                     if (!CheckPointSafe(transform.position, enemyTransforms))
@@ -123,11 +124,12 @@ public class IAHostage : MonoBehaviour
     {
         foreach (var ias in enemies)
         {
-            if (ias.isAttack)
-            {
-                fleeingEnemies = true;
-                return;
-            }
+            if (ias != null)
+                if (ias.isAttack)
+                {
+                    fleeingEnemies = true;
+                    return;
+                }
         }
 
         fleeingEnemies = false;
@@ -149,8 +151,9 @@ public class IAHostage : MonoBehaviour
         List<Transform> enemyTransforms = new List<Transform>();
         for (int i = 0; i < enemies.Length; i++)
         {
-            if (enemies[i].isAttack)
-                enemyTransforms.Add(enemies[i].transform);
+            if (enemies[i] != null)
+                if (enemies[i].isAttack)
+                    enemyTransforms.Add(enemies[i].transform);
         }
 
         for (int i = 0; i < numberOfCirclesToCheck; i++)
