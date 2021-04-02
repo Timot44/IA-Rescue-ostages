@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
    public Weapons weaponToAdd;
-   
+   public ParticleSystem sfx_shoot;
    private void OnTriggerEnter(Collider other)
    {
      
@@ -19,7 +19,8 @@ public class Gun : MonoBehaviour
         
          other.gameObject.GetComponent<PlayerShoot>().currentWeapoons = weaponToAdd;
          gameObject.transform.SetParent(other.gameObject.GetComponent<PlayerShoot>().weapons_holders);
-        
+         other.gameObject.GetComponent<PlayerShoot>().shoot_vfx = sfx_shoot;
+         
          other.gameObject.GetComponent<PlayerShoot>().SetUpCurrentWeapon();
          //On set up la position et la rotation de l'arme par rapport au placeHolder
          gameObject.transform.position = other.gameObject.GetComponent<PlayerShoot>().weapons_holders.position;

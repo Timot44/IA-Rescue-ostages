@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using TreeEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -40,6 +39,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
          _timerToSpawnItem = initialTimer;
+         Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -105,6 +105,9 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         panelWin.SetActive(true);
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+        UI_MenuButtons._instance.isGameIsPause = true;
     }
     
     

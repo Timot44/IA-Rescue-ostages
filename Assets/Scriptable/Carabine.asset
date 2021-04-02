@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c71c900ced0e249b9b60d0fbe5b0d7, type: 3}
   m_Name: Carabine
   m_EditorClassIdentifier: 
-  name: carabine
-  fireRate: 2.5
-  currentAmmo: 5
-  damage: 20
+  name: Rifle
+  fireRate: 1
+  currentAmmo: 10
+  damage: 25
   range: 150
   layers:
     serializedVersion: 2

@@ -94,7 +94,7 @@ public class IAHostage : MonoBehaviour
                     List<Transform> enemyTransforms = new List<Transform>();
                     for (int i = 0; i < enemies.Length; i++)
                     {
-                        if (enemies[i].isAttack)
+                        if (enemies[i].isAttack && enemies[i])
                             enemyTransforms.Add(enemies[i].transform);
                     }
 

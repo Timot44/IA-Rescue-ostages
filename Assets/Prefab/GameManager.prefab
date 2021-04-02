@@ -46,10 +46,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSpawnable:
   - {fileID: 6748585897760785371, guid: 1f00118fd46a75e4e8df8e2a5bb49907, type: 3}
-  - {fileID: 7954177607869898817, guid: 23b466c47d88f024fa8a6277bb077902, type: 3}
+  - {fileID: 6748585897760785371, guid: 1f00118fd46a75e4e8df8e2a5bb49907, type: 3}
   - {fileID: 4928290056754401619, guid: 15c2ccb19d6bace47b1ece9a216a5ef0, type: 3}
+  - {fileID: 4928290056754401619, guid: 15c2ccb19d6bace47b1ece9a216a5ef0, type: 3}
+  - {fileID: 7954177607869898817, guid: 23b466c47d88f024fa8a6277bb077902, type: 3}
+  - {fileID: 7954177607869898817, guid: 23b466c47d88f024fa8a6277bb077902, type: 3}
+  - {fileID: 7954177607869898817, guid: 23b466c47d88f024fa8a6277bb077902, type: 3}
   - {fileID: 7954177607869898817, guid: 026e5150677d2d743a93224f85434421, type: 3}
+  - {fileID: 7954177607869898817, guid: 026e5150677d2d743a93224f85434421, type: 3}
+  - {fileID: 4849785144853727007, guid: 43e739748d4cd0b46b555a03a71c8434, type: 3}
   placeToSpawnItems:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

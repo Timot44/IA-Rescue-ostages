@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+<<<<<<< HEAD
     <e p="C:\Users\Milomane\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Milomane\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_IA-Rescue-ostages.-1294525456.00" t="ExcludeRecursive" />
     <e p="C:\Users\Milomane\Documents\Jeux Unity\IA-Rescue-ostages" t="IncludeRecursive">
+=======
+    <e p="C:\Users\ronde\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ronde\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_IA-Rescue-ostages.-801990668.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ronde\Desktop\Unity E-artsup\IA 2nde Semestre\IA-Rescue-ostages" t="IncludeRecursive">
+>>>>>>> bed8ad8bbffec4b407a62ca859e001cb4b527bd7
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="NavMeshComponents-master" t="Include">
@@ -70,7 +76,6 @@
             <e p="ProjectVersion.txt" t="Include" />
           </e>
         </e>
-        <e p="PlayerNearDetection.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Bilboard.cs" t="Include" />
           <e p="BulletBehaviour.cs" t="Include" />
@@ -98,13 +103,13 @@
               <e p="Mine.cs" t="Include" />
             </e>
           </e>
-          <e p="IPooledObject.cs" t="Include" />
           <e p="ObjectPooler.cs" t="Include" />
           <e p="Objects" t="Include">
             <e p="Ammos.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
             <e p="HealthPack.cs" t="Include" />
           </e>
+          <e p="PlayerNearDetection.cs" t="Include" />
           <e p="PlayerScripts" t="Include">
             <e p="Player.cs" t="Include" />
             <e p="PlayerLife.cs" t="Include" />
