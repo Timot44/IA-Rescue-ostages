@@ -188,6 +188,14 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="WorldSkies" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="LookCamera.cs" t="Include" />
+              <e p="SkyboxChanger.cs" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="IA-Rescue-ostages.sln" t="IncludeFlat" />
       <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
