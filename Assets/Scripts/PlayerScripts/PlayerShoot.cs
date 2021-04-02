@@ -75,7 +75,7 @@ public class PlayerShoot : Player
         UpdateTextAmmo();
         shoot_vfx.Play();
         
-         
+         //Si le raycast touche un object avec le bon layers il déclenche  la focntion TakeDamage pour l'IA
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit, currentWeapoons.range,currentWeapoons.layers))
         {
             GameObject impact = Instantiate(impact_vfx, raycastHit.point, Quaternion.LookRotation(gameObject.transform.position));

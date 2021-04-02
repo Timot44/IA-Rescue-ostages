@@ -25,12 +25,11 @@ public class PlayerMovement : Player
         
     }
 
+    //Fonction permettant de bouger le joueur
     private void Movement()
     {
         Vector3 move = (transform.right * moveX) + (transform.forward * moveZ);
         controller.Move(move * (speed * Time.deltaTime));
-        
-            
     }
 
     // Update is called once per frame

@@ -32,7 +32,7 @@ public class PlayerLife : Player
         
         
     }
-
+    //Fonction permettant d'Heal le player
     public void PlayerHeal(int amount)
     {
         
@@ -45,6 +45,7 @@ public class PlayerLife : Player
         
     }
 
+    //Fonction permettant de faire des dommages au player
     public void TakeDamage(int amount)
     {
         playerLife -= amount;
