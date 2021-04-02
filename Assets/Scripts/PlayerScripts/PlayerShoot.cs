@@ -21,6 +21,7 @@ public class PlayerShoot : Player
     public string weaponName;
     public TextMeshProUGUI weaponNameText;
     public TextMeshProUGUI ammoText;
+    public TextMeshProUGUI countdownToShootAgain;
     [Header("Effect")]
     public ParticleSystem shoot_vfx;
     public GameObject impact_vfx;
@@ -31,8 +32,8 @@ public class PlayerShoot : Player
             fireRate -= Time.deltaTime;
             fireRate = Mathf.Clamp(fireRate, 0, Mathf.Infinity);
         }
-       
-        
+
+        countdownToShootAgain.text = $"Shoot In: {fireRate.ToString("F")}";
 
         if (Input.GetMouseButtonDown(0) && fireRate <= 0f && currentWeapoons && ammo > 0)
         {

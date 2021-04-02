@@ -11927,6 +11927,16 @@ PrefabInstance:
       propertyPath: placeToSpawnItems.Array.data[7]
       value: 
       objectReference: {fileID: 1358901936}
+    - target: {fileID: 6757040570431827226, guid: 8516a34e20431ed47952c7b40bd3362e,
+        type: 3}
+      propertyPath: initialTimerToSpawnItem
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757040570431827226, guid: 8516a34e20431ed47952c7b40bd3362e,
+        type: 3}
+      propertyPath: deathPlayerTxt
+      value: 
+      objectReference: {fileID: 1423732334}
     - target: {fileID: 6757040570431827227, guid: 8516a34e20431ed47952c7b40bd3362e,
         type: 3}
       propertyPath: m_Name
@@ -20254,6 +20264,11 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 2008840489}
+    - target: {fileID: 1941184131251242932, guid: 4060b64b64d75024c9cad5ac73d27afa,
+        type: 3}
+      propertyPath: countdownToShootAgain
+      value: 
+      objectReference: {fileID: 1436919714}
     - target: {fileID: 1941184131251242933, guid: 4060b64b64d75024c9cad5ac73d27afa,
         type: 3}
       propertyPath: slider
@@ -27699,6 +27714,12 @@ Transform:
   m_Father: {fileID: 1913186828}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1423732334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7892431571149519991, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1879967343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1431066401
 GameObject:
   m_ObjectHideFlags: 0
@@ -28040,6 +28061,18 @@ Transform:
   m_Father: {fileID: 1263924062}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1436919714 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9100537886810629605, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1879967343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1440742514
 Mesh:
   m_ObjectHideFlags: 0
@@ -38718,6 +38751,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106819839011948952, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 314.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106819839011948952, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 443.15674
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100537886810629605, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100537886810629605, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100537886810629605, guid: d25c4ca82562cc64fb1481bfc7675d6b,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d25c4ca82562cc64fb1481bfc7675d6b, type: 3}

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,14 +12,18 @@ public class GameManager : MonoBehaviour
     public List<Transform> placeToSpawnItems;
 
     public GameObject panelWin;
-    
+    public GameObject deathPlayerTxt;
+
     public Transform playerRespawnPoint;
     public Transform hostageRespawnPoint;
     
     private float _timerToSpawnItem;
-    public float initialTimer;
+    public float initialTimerToSpawnItem;
+    private float _countdownToDisableTextDeath = 3;
     
     public bool isPhaseTwo;
+    private bool textDeathCountdown;
+
     #region singleton
 
     public static GameManager Instance;
@@ -38,7 +43,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         _timerToSpawnItem = initialTimer;
+         _timerToSpawnItem = initialTimerToSpawnItem;
          Cursor.visible = false;
     }
 
@@ -50,12 +55,27 @@ public class GameManager : MonoBehaviour
         {
             SpawnItem();
         }
+
+        if (textDeathCountdown)
+        {
+            _countdownToDisableTextDeath -= Time.deltaTime;
+        }
+
+        if (_countdownToDisableTextDeath <= 0)
+        {
+            textDeathCountdown = false;
+            _countdownToDisableTextDeath = 3;
+            deathPlayerTxt.SetActive(false);
+        }
     }
 
     public void RespawnPlayer(GameObject player,GameObject hostage)
     {
+        
         if (isPhaseTwo)
         {
+            deathPlayerTxt.SetActive(true);
+            textDeathCountdown = true;
             player.GetComponent<CharacterController>().enabled = false;
             player.transform.position = playerRespawnPoint.position;
             player.GetComponent<PlayerLife>().Start();
@@ -93,7 +113,7 @@ public class GameManager : MonoBehaviour
             }
         }
         _objectSpawned.Clear();
-        _timerToSpawnItem = initialTimer;
+        _timerToSpawnItem = initialTimerToSpawnItem;
         foreach (var placeToSpawnItem in placeToSpawnItems)
         {
             GameObject itemToSpawn = itemSpawnable[Random.Range(0, itemSpawnable.Count)];
