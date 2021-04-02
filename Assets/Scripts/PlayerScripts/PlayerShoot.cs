@@ -21,7 +21,9 @@ public class PlayerShoot : Player
     public string weaponName;
     public TextMeshProUGUI weaponNameText;
     public TextMeshProUGUI ammoText;
+    [Header("Effect")]
     public ParticleSystem shoot_vfx;
+    public GameObject impact_vfx;
     void Update()
     {
         if (currentWeapoons)
@@ -75,8 +77,9 @@ public class PlayerShoot : Player
          
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit, currentWeapoons.range,currentWeapoons.layers))
         {
-            Debug.Log(raycastHit.collider.name);
+            GameObject impact = Instantiate(impact_vfx, raycastHit.point, Quaternion.LookRotation(gameObject.transform.position));
             raycastHit.collider.gameObject.GetComponent<IAParent>().TakeDamage(weaponDamage);
+            Destroy(impact, 2);
         }
         fireRate = currentWeapoons.fireRate;
     }

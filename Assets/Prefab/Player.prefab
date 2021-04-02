@@ -216,9 +216,9 @@ MonoBehaviour:
   weaponName: 
   weaponNameText: {fileID: 0}
   ammoText: {fileID: 0}
-  canDisarm: 0
-  mineList: []
-  disarmDistance: 2
+  shoot_vfx: {fileID: 0}
+  impact_vfx: {fileID: 2066726187361638532, guid: fed53f8542eaa6f468a250ee78e6b011,
+    type: 3}
 --- !u!114 &1941184131251242933
 MonoBehaviour:
   m_ObjectHideFlags: 0
