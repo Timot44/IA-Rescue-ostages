@@ -54,6 +54,8 @@ public class IAPatroller : IAParent
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        health = maxHealth;
+        SetBarMax(maxHealth);
         currentState = new PatrollerStateP1();
         InvokeRepeating("AttemptToPlaceMine", 0, placeMineTime);
     }

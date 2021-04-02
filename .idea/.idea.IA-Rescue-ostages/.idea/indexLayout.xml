@@ -3,15 +3,12 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes />
-<<<<<<< Updated upstream
-    <explicitExcludes />
-=======
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Library</Path>
+      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
->>>>>>> Stashed changes
   </component>
 </project>
