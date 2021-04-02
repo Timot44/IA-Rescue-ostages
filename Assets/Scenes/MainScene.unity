@@ -38441,41 +38441,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8106819839011948952, guid: d25c4ca82562cc64fb1481bfc7675d6b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8106819839011948952, guid: d25c4ca82562cc64fb1481bfc7675d6b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8106819839011948952, guid: d25c4ca82562cc64fb1481bfc7675d6b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -20.699951
-      objectReference: {fileID: 0}
-    - target: {fileID: 9100537886810629605, guid: d25c4ca82562cc64fb1481bfc7675d6b,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 9100537886810629605, guid: d25c4ca82562cc64fb1481bfc7675d6b,
-        type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9100537886810629605, guid: d25c4ca82562cc64fb1481bfc7675d6b,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 9100537886810629605, guid: d25c4ca82562cc64fb1481bfc7675d6b,
-        type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d25c4ca82562cc64fb1481bfc7675d6b, type: 3}
 --- !u!1 &1879967344 stripped

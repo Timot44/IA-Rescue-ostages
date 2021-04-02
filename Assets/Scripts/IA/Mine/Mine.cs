@@ -27,7 +27,7 @@ public class Mine : MonoBehaviour
             {
                 player.TakeDamage(damageAmount);
             }
-
+            gameObject.GetComponent<DisarmMine>().DesactiveText();
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

@@ -8,7 +8,7 @@ public class UI_MenuButtons : MonoBehaviour
 {
    public GameObject pausePanel;
    public bool isGameIsPause;
-
+   public GameObject disarm_text;
    public static UI_MenuButtons _instance;
 
    private void Start()
