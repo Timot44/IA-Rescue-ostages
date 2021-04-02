@@ -41,7 +41,9 @@ public class IACac : IAParent
 
      
     void Update()
-    {
+    {    
+        
+        // If the AI Detect the player she start the RunToPlayer function
 
         if (IsPlayerDetected())
         {
@@ -50,6 +52,7 @@ public class IACac : IAParent
         }
         else
         {
+            // Move the Ia cac
             currentState.Move(this);
             
         }
@@ -57,10 +60,14 @@ public class IACac : IAParent
 
     public bool IsPlayerDetected()
     {
-        float anglePerRay = angle / rayCount;
+        // Function to detect player
         
+        // Took the angle to add per ray placed
+        float anglePerRay = angle / rayCount;
+       
         for (int i = 0; i < rayCount; i++)
         {
+            // Foreach ray, this part calculate positions for point to raycast toward
             Vector3 rayForward = new Vector3(detectionRange * Mathf.Sin((Mathf.Deg2Rad * anglePerRay * i) - (angle/2) * Mathf.Deg2Rad + transform.localEulerAngles.y * Mathf.Deg2Rad), 
                                      0, 
                                      detectionRange * Mathf.Cos((Mathf.Deg2Rad * anglePerRay * i) - (angle/2) * Mathf.Deg2Rad + transform.localEulerAngles.y * Mathf.Deg2Rad));
@@ -69,6 +76,7 @@ public class IACac : IAParent
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, detectionRange))
             {
+                // If the ray touch the player or the hostage, the function return true
                 if (hit.collider.tag == "Player")
                 {
                     obj_spoted = hit.collider.gameObject;

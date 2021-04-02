@@ -45,7 +45,7 @@ public class PlayerShoot : Player
 
     public void SetUpCurrentWeapon()
     {
-        //Set up les parametres pour l'arme actuel
+        //Set up the parameters of the current weapon
         fireRate = currentWeapoons.fireRate;
         ammo = currentWeapoons.currentAmmo;
         weaponDamage = currentWeapoons.damage;
@@ -56,7 +56,7 @@ public class PlayerShoot : Player
     
     private void FixedUpdate()
     {
-        //Update la pos et la rotation de la camera pour avoir un meilleur tir
+        //Update the pos and rot of the camera
         _pos_cam = Camera.main.transform.position;
         _rot_cam = Camera.main.transform.rotation;
         _cam_shootpoint = Camera.main.transform.forward;
@@ -75,7 +75,8 @@ public class PlayerShoot : Player
         UpdateTextAmmo();
         shoot_vfx.Play();
         
-         //Si le raycast touche un object avec le bon layers il déclenche  la focntion TakeDamage pour l'IA
+        
+        //If the raycast touch an object with the good layers he trigger the function TakeDamage for the IA   
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit, currentWeapoons.range,currentWeapoons.layers))
         {
             GameObject impact = Instantiate(impact_vfx, raycastHit.point, Quaternion.LookRotation(gameObject.transform.position));

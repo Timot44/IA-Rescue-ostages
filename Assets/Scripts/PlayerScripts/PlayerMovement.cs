@@ -25,7 +25,7 @@ public class PlayerMovement : Player
         
     }
 
-    //Fonction permettant de bouger le joueur
+    //Function for moving the player
     private void Movement()
     {
         Vector3 move = (transform.right * moveX) + (transform.forward * moveZ);
@@ -35,7 +35,7 @@ public class PlayerMovement : Player
     // Update is called once per frame
     void Update()
     {
-        //Je récupère le float de l'axis horizontal et vertical
+        //I took the float of the horizontal axis and the vertical axis
         moveX = Input.GetAxis("Horizontal");
         moveZ = Input.GetAxis("Vertical");
 

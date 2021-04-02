@@ -19,11 +19,11 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Je récupère la la mouseX et mouseY
+        //I took the float of the horizontal axis and the vertical axis
         float  mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         
-        //Je gère la rotation de la caméra et la clamp
+        // I manage the rotation of the camera nd the clamp
         _xRotation -= mouseY;
         _xRotation = Mathf.Clamp(_xRotation, -90, 90);
         playerbody.Rotate(Vector3.up * mouseX);

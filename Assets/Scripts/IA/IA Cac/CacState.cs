@@ -9,6 +9,7 @@ public abstract class CacState
    public virtual void Move(IACac ctx)
    {
       ctx.isAttack = false;
+      // if player detected ia go toward the player
       if (!ctx.isPlayerDetected)
       {
          if (ctx.isRushing)
@@ -42,6 +43,7 @@ public abstract class CacState
 
    public virtual void Attack(IACac ctx)
    {
+      //If player detected the Ia go to its curretn pos and if is not already attacked the ia attack
       if (ctx.isPlayerDetected)
       {
          ctx.agent.SetDestination(ctx.transform.position);
@@ -68,6 +70,7 @@ public abstract class CacState
 
    public virtual void RunToPlayer(IACac ctx)
    {
+      //If player detected the Ia go to the player with a calculate distance  and attack if he is in a range
       if (ctx.isPlayerDetected)
       {
          
