@@ -83,8 +83,6 @@ public class IAPatroller : IAParent
         minePlaced = true;
         GameObject mine = Instantiate(prefabMine, spawnMineTransform.position, Quaternion.identity);
         mine.GetComponent<Mine>().aIPlacer = this;
-        player.GetComponent<PlayerShoot>().canDisarm = true;
-        player.GetComponent<PlayerShoot>().mine = mine;
     }
 
     public bool DetectPlayer()

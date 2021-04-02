@@ -21,9 +21,6 @@ public class PlayerShoot : Player
     public string weaponName;
     public TextMeshProUGUI weaponNameText;
     public TextMeshProUGUI ammoText;
-    public bool canDisarm;
-    public List<GameObject> mineList;
-    public float disarmDistance;
     public ParticleSystem shoot_vfx;
     void Update()
     {
@@ -39,18 +36,7 @@ public class PlayerShoot : Player
         {
             Shoot();
         }
-
-        if (!mineList.Count.Equals(0))
-        {
-            foreach (GameObject mine in mineList)
-            {
-                if (Input.GetKeyDown(KeyCode.E)  && Vector3.Distance(gameObject.transform.position, mine.transform.position) < disarmDistance)
-                {
-                    DisarmMine(mine);
-                }
-            }
-        }
-       
+        
         
     }
 
@@ -95,12 +81,7 @@ public class PlayerShoot : Player
         fireRate = currentWeapoons.fireRate;
     }
 
-    private void DisarmMine(GameObject mine)
-    {
-        mine.GetComponent<Mine>().aIPlacer.minePlaced = false;
-        mineList.Remove(mine);
-        Destroy(mine);
-    }
+    
     
 
     
