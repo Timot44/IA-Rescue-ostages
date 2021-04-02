@@ -14,7 +14,6 @@ public class IAHostage : MonoBehaviour
     public float correctDistanceFromPlayer = 2f;
     public NavMeshAgent agent;
     public Slider healthBarSlider;
-    public bool testFlee;
 
     [Header("Hide parameters")] 
     public float distanceToCheck = 10f;
@@ -73,7 +72,7 @@ public class IAHostage : MonoBehaviour
         
         if (phaseTwo)
         {
-            if (!fleeingEnemies && !testFlee)
+            if (!fleeingEnemies)
                 if (Vector3.Distance(player.position, transform.position) > correctDistanceFromPlayer)
                 {
                     agent.destination = player.transform.position;
@@ -233,7 +232,7 @@ public class IAHostage : MonoBehaviour
                 Vector3 pointPosition = new Vector3(circleDistance * Mathf.Sin(Mathf.Deg2Rad * degreePerPoint * y), 0, circleDistance * Mathf.Cos(Mathf.Deg2Rad * degreePerPoint * y));
                 
                 Gizmos.color = Color.green;
-                Gizmos.DrawSphere(transform.position + pointPosition, .2f);
+                Gizmos.DrawSphere(transform.position + pointPosition, .5f);
             }
         }
 

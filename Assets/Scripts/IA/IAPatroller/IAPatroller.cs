@@ -10,7 +10,6 @@ public class IAPatroller : IAParent
     public bool minePlaced;
     
     [Header("Call parameters")]
-    public int callEnemyCount = 5;
     public float callEnemyMaxDistance = 15;
     
     [Header("Behavior")]
@@ -36,14 +35,12 @@ public class IAPatroller : IAParent
     void CallEnemies()
     {
         GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        int helpCounter = callEnemyCount;
 
         foreach (var enemy in allEnemies)
         {
             if (Vector3.Distance(enemy.transform.position, transform.position) < callEnemyMaxDistance)
             {
                 enemy.GetComponent<IAParent>().HelpPatroller(player);
-                helpCounter--;
             }
         }
     }

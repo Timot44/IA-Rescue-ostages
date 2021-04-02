@@ -15,7 +15,6 @@ public abstract class IAParent : MonoBehaviour
     public Slider slider;
     
     [Header("Movement Parameters")]
-    public float baseSpeed;
     public float distanceToChangeWaypoint;
     public Transform[] patrolWaypoint;
     public bool isAttack;
