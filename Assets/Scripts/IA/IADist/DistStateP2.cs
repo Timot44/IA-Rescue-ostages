@@ -7,6 +7,7 @@ public class DistStateP2 : DistState
         context = ctx;
         maxDistanceMultiplier = 2;
     }
+//Move following a pattern
 
     public override void Move()
     {
@@ -18,6 +19,7 @@ public class DistStateP2 : DistState
             Shoot();
         }
     }
+//allow the detection of the player
 
     public bool DetectPlayer(IADist ctx)
     {

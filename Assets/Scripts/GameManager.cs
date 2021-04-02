@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> itemSpawnable;
 
     private List<GameObject> _objectSpawned = new List<GameObject>(2);
-    
+
     public List<Transform> placeToSpawnItems;
 
     public GameObject panelWin;
@@ -16,11 +16,11 @@ public class GameManager : MonoBehaviour
 
     public Transform playerRespawnPoint;
     public Transform hostageRespawnPoint;
-    
+
     private float _timerToSpawnItem;
     public float initialTimerToSpawnItem;
     private float _countdownToDisableTextDeath = 3;
-    
+
     public bool isPhaseTwo;
     private bool textDeathCountdown;
 
@@ -34,8 +34,6 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
-
-
     }
 
     #endregion
@@ -43,8 +41,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         _timerToSpawnItem = initialTimerToSpawnItem;
-         Cursor.visible = false;
+        _timerToSpawnItem = initialTimerToSpawnItem;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -69,9 +67,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void RespawnPlayer(GameObject player,GameObject hostage)
+//Restart the phase depending on which the player died in
+    public void RespawnPlayer(GameObject player, GameObject hostage)
     {
-        
         if (isPhaseTwo)
         {
             deathPlayerTxt.SetActive(true);
@@ -80,7 +78,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = playerRespawnPoint.position;
             player.GetComponent<PlayerLife>().Start();
             player.GetComponent<CharacterController>().enabled = true;
-            
+
             hostage.transform.position = hostageRespawnPoint.position;
             hostage.GetComponent<IAHostage>().health = hostage.GetComponent<IAHostage>().maxHealth;
         }
@@ -89,7 +87,8 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         }
     }
-    
+
+    //change the phase for all enemies when the player get to the hostage
     public void SwitchPhaseForAll()
     {
         isPhaseTwo = true;
@@ -100,18 +99,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // spawn random item in the place they belong
     private void SpawnItem()
     {
         foreach (var obj in _objectSpawned)
         {
             foreach (var place in placeToSpawnItems)
             {
-                if (obj !=null && obj.transform.position == place.position)
+                if (obj != null && obj.transform.position == place.position)
                 {
-                    DestroyImmediate(obj,true);
+                    DestroyImmediate(obj, true);
                 }
             }
         }
+
         _objectSpawned.Clear();
         _timerToSpawnItem = initialTimerToSpawnItem;
         foreach (var placeToSpawnItem in placeToSpawnItems)
@@ -122,6 +123,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //it's the victory condition
     public void Win()
     {
         panelWin.SetActive(true);
@@ -129,7 +131,4 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         UI_MenuButtons._instance.isGameIsPause = true;
     }
-    
-    
-    
 }

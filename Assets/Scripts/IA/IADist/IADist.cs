@@ -21,13 +21,13 @@ public class IADist : IAParent
     {
         currentState.Move();
     }
-    
+    //change state of AI
     public override void SwitchToState()
     {
         Debug.Log("je change d'état");
         currentState = new DistStateP2(this);
     }
-
+//Go help the Patroller
     public override void HelpPatroller(Transform playerPos)
     {
         isRushing = true;
