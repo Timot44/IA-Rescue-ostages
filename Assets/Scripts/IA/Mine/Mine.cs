@@ -13,7 +13,7 @@ public class Mine : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // if the player enter the collision of this object, the mine explode
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             // Reset the bool in the patroller to say that it can place a new mine
             aIPlacer.minePlaced = false;
